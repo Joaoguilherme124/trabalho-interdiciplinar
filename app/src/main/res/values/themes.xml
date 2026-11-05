@@ -13,6 +13,13 @@
 
     <style name="Theme.TrabalhoInterDiciplinar" parent="Base.Theme.TrabalhoInterDiciplinar" />
 
+    <style name="Theme.TrabalhoInterDiciplinar.Splash" parent="Theme.TrabalhoInterDiciplinar">
+        <item name="android:statusBarColor">@color/bg_app</item>
+        <item name="android:navigationBarColor">@color/bg_app</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowBackground">@color/bg_app</item>
+    </style>
+
     <style name="Widget.App.BottomNav" parent="Widget.Material3.BottomNavigationView">
         <item name="itemIconTint">@color/bottom_nav_color</item>
         <item name="itemTextColor">@color/bottom_nav_color</item>

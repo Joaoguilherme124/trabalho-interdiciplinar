@@ -42,6 +42,7 @@ dependencies {
     implementation(libs.lifecycle.viewmodel)
     implementation(libs.lifecycle.livedata)
     implementation("androidx.lifecycle:lifecycle-runtime:2.9.4")
+    implementation("com.airbnb.android:lottie:6.6.6")
     testImplementation(libs.junit)
     androidTestImplementation(libs.espresso.core)
     androidTestImplementation(libs.ext.junit)
