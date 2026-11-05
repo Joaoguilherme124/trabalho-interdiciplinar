@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Vitrine</string>
+
+    <string name="nav_home">Home</string>
+    <string name="nav_categorias">Categorias</string>
+    <string name="nav_carrinho">Carrinho</string>
+    <string name="nav_pedidos">Pedidos</string>
+    <string name="nav_perfil">Perfil</string>
+
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_produtos">Produtos</string>
+    <string name="nav_pedidos_loja">Pedidos</string>
+
+    <string name="login_title">Entrar na Vitrine</string>
+    <string name="cadastro_title">Criar conta</string>
+    <string name="recuperar_title">Recuperar senha</string>
+    <string name="hint_email">E-mail</string>
+    <string name="hint_senha">Senha</string>
+    <string name="hint_nome">Nome completo</string>
+    <string name="hint_telefone">Telefone</string>
+    <string name="hint_endereco">Endereço</string>
+    <string name="btn_entrar">Entrar</string>
+    <string name="btn_cadastrar">Cadastrar</string>
+    <string name="btn_enviar">Enviar link</string>
+    <string name="link_cadastro">Criar conta</string>
+    <string name="link_recuperar">Esqueci a senha</string>
+    <string name="tipo_conta">Tipo de conta</string>
+
+    <string name="buscar_hint">Buscar produtos ou lojas…</string>
+    <string name="lojas_destaque">Lojas em destaque</string>
+    <string name="produtos">Produtos</string>
+    <string name="adicionar_carrinho">Adicionar ao carrinho</string>
+    <string name="ver_loja">Ver loja do vendedor</string>
+    <string name="finalizar_compra">Finalizar compra</string>
+    <string name="checkout">Checkout</string>
+    <string name="meus_pedidos">Meus pedidos</string>
+    <string name="sair">Sair</string>
+
+    <string name="nova_loja">Solicitar abertura de loja</string>
+    <string name="novo_produto">Novo produto</string>
+    <string name="salvar">Salvar</string>
+    <string name="aprovar">Aprovar</string>
+    <string name="rejeitar">Rejeitar</string>
+
+    <string-array name="tipos_usuario">
+        <item>COMPRADOR</item>
+        <item>LOJISTA</item>
+        <item>ADMIN</item>
+    </string-array>
+
+    <string-array name="formas_pagamento">
+        <item>PIX</item>
+        <item>CARTAO</item>
+        <item>BOLETO</item>
+    </string-array>
+
+    <string-array name="categorias">
+        <item>Todos</item>
+        <item>Eletrônicos</item>
+        <item>Moda</item>
+        <item>Alimentos</item>
+        <item>Casa</item>
+        <item>Beleza</item>
+        <item>Esportes</item>
+    </string-array>
+</resources>

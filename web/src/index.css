@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #0f1412;
+  --color-ink-soft: #2a3530;
+  --color-mist: #f3f6f2;
+  --color-paper: #ffffff;
+  --color-leaf: #0b3d2e;
+  --color-leaf-mid: #146b4e;
+  --color-lime: #c8f542;
+  --color-lime-deep: #a8d62e;
+  --color-sand: #e7ecdf;
+  --color-line: #d5ddd0;
+  --color-muted: #5c6b63;
+
+  --color-dark-bg: #0a100e;
+  --color-dark-panel: #121a17;
+  --color-dark-elevated: #1a2420;
+  --color-dark-line: #2a3832;
+  --color-dark-muted: #8aa094;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply m-0 min-h-screen bg-mist font-sans text-ink antialiased transition-colors duration-300;
+    @apply dark:bg-dark-bg dark:text-mist;
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+}
+
+@layer utilities {
+  .page-enter {
+    animation: pageIn 0.35s ease both;
+  }
+
+  .drawer-enter {
+    animation: drawerIn 0.28s ease both;
+  }
+
+  .modal-enter {
+    animation: modalIn 0.25s ease both;
+  }
+
+  .backdrop-enter {
+    animation: fadeIn 0.2s ease both;
+  }
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes drawerIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

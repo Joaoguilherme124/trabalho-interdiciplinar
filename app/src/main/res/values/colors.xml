@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Paleta Paella Beneficente / Vitrine -->
+    <color name="bg_app">#FFFFFBF5</color>
+    <color name="paper">#FFFFFFFF</color>
+
+    <!-- Vinho / plum (títulos, avatar, destaques) -->
+    <color name="leaf">#FF5C2D4B</color>
+    <color name="leaf_mid">#FF734060</color>
+
+    <!-- Amarelo mostarda (CTA, nav ativo, chips) -->
+    <color name="lime">#FFFFC12D</color>
+
+    <color name="sand">#FFF5E6D3</color>
+    <color name="line">#FFE8DFD4</color>
+    <color name="text_dark">#FF1A1A1A</color>
+    <color name="text_muted">#FF757575</color>
+    <color name="nav_dark">#FF1A1A1A</color>
+
+    <color name="accent_peach">#FFF8E8D0</color>
+    <color name="accent_mint">#FFD4EEE8</color>
+    <color name="quote_burgundy">#FF5C2D4B</color>
+
+    <color name="danger">#FFE53935</color>
+    <color name="warning">#FFF6A609</color>
+    <color name="success">#FF2E7D32</color>
+    <color name="chip_bg">#FFF5E6D3</color>
+    <color name="chip_selected">#FFFFC12D</color>
+    <color name="star">#FFFFC12D</color>
+    <color name="notif_dot">#FFFF3B30</color>
+
+    <!-- Mapeamento para os drawables que exigem estes nomes -->
+    <color name="yellow_btn">#FFFFC12D</color>  <!-- Usa a mesma cor do 'lime' -->
+    <color name="card_stroke">#FFE8DFD4</color> <!-- Usa a mesma cor do 'line' -->
+    <color name="cart_bar">#FF1A1A1A</color>    <!-- Usa a mesma cor do 'text_dark' ou insira a cor desejada -->
+</resources>
