@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="checkout_titulo">Finalizar pedido</string>
+    <string name="checkout_descricao">Confira seu pedido antes de continuar.</string>
+    <string name="checkout_secao_pedido">Seu pedido</string>
+    <string name="checkout_subtotal">Subtotal</string>
+    <string name="checkout_total">Total</string>
+    <string name="checkout_secao_pagamento">Forma de pagamento</string>
+
+    <string name="checkout_pix_titulo">Pix</string>
+    <string name="checkout_pix_selo">Simulado</string>
+    <string name="checkout_pix_desc">Pagamento instantâneo de demonstração.</string>
+    <string name="checkout_cartao_titulo">Cartão</string>
+    <string name="checkout_cartao_selo">Simulado</string>
+    <string name="checkout_cartao_desc">Crédito ou débito de demonstração.</string>
+
+    <string name="checkout_pix_painel_titulo">Pix de demonstração</string>
+    <string name="checkout_pix_painel_texto">Esta é uma simulação. Nenhuma chave Pix, QR Code de pagamento ou transferência é gerada.</string>
+    <string name="checkout_cartao_painel_titulo">Cartão de demonstração</string>
+    <string name="checkout_cartao_painel_texto">Esta é uma simulação. Nenhum dado de cartão é solicitado ou armazenado.</string>
+    <string name="checkout_painel_valor">Valor da simulação</string>
+    <string name="checkout_aviso_sem_cobranca">Nenhuma cobrança real será realizada.</string>
+
+    <string name="checkout_cartao_ilustrativo">Cartão ilustrativo</string>
+    <string name="checkout_cartao_numero">•••• •••• •••• 0000</string>
+    <string name="checkout_cartao_titular">NOME DO TITULAR</string>
+    <string name="checkout_cartao_validade">00/00</string>
+
+    <string name="checkout_btn_escolha">Escolha como pagar</string>
+    <string name="checkout_btn_pix">Simular pagamento Pix</string>
+    <string name="checkout_btn_cartao">Simular pagamento com cartão</string>
+    <string name="checkout_btn_processando">Processando…</string>
+    <string name="checkout_processando_desc">Processando a simulação de pagamento</string>
+    <string name="checkout_carrinho_vazio">Seu carrinho está vazio.</string>
+    <string name="cd_opcao_pagamento">%1$s, simulado</string>
+</resources>

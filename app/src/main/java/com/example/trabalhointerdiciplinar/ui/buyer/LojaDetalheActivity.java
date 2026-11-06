@@ -16,7 +16,7 @@ import com.example.trabalhointerdiciplinar.model.Loja;
 
 import java.util.Locale;
 
-public class LojaDetalheActivity extends AppCompatActivity {
+public class LojaDetalheActivity extends AppCompatActivity implements ProdutoSheetFragment.Host {
     public static final String EXTRA_LOJA_ID = "loja_id";
 
     @Override
@@ -40,12 +40,19 @@ public class LojaDetalheActivity extends AppCompatActivity {
 
         RecyclerView rv = findViewById(R.id.rv_produtos);
         rv.setLayoutManager(new LinearLayoutManager(this));
-        ProdutoAdapter adapter = new ProdutoAdapter(produto -> {
-            Intent i = new Intent(this, ProdutoDetalheActivity.class);
-            i.putExtra(ProdutoDetalheActivity.EXTRA_PRODUTO_ID, produto.getId());
-            startActivity(i);
-        });
+        ProdutoAdapter adapter = new ProdutoAdapter(produto ->
+                ProdutoSheetFragment.mostrar(getSupportFragmentManager(), produto.getId()));
         rv.setAdapter(adapter);
-        adapter.submit(MockDataRepository.getInstance().getProdutosPorLoja(id));
+        adapter.submit(MockDataRepository.getInstance().getProdutosPublicadosDaLoja(id));
+    }
+
+    @Override
+    public void onProdutoAdicionado(com.example.trabalhointerdiciplinar.model.Produto produto, long alteracaoId) {
+        com.example.trabalhointerdiciplinar.util.FeedbackPedido.adicionado(
+                findViewById(android.R.id.content), null, alteracaoId, null);
+    }
+
+    @Override
+    public void onSheetFechado() {
     }
 }

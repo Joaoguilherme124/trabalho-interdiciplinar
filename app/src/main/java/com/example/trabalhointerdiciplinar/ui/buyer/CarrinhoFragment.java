@@ -17,13 +17,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.trabalhointerdiciplinar.R;
 import com.example.trabalhointerdiciplinar.adapter.CarrinhoAdapter;
 import com.example.trabalhointerdiciplinar.data.CarrinhoManager;
+import com.example.trabalhointerdiciplinar.data.DemoCatalog;
 import com.example.trabalhointerdiciplinar.util.MoneyUtils;
 
 public class CarrinhoFragment extends Fragment {
 
     private CarrinhoAdapter adapter;
     private TextView txtTotal;
-    private TextView txtVazio;
+    private View txtVazio;
     private View btnCheckout;
 
     @Nullable
@@ -38,9 +39,14 @@ public class CarrinhoFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         RecyclerView rv = view.findViewById(R.id.rv_carrinho);
         txtTotal = view.findViewById(R.id.txt_total);
-        txtVazio = view.findViewById(R.id.txt_vazio);
+        txtVazio = view.findViewById(R.id.estado_vazio_carrinho);
         btnCheckout = view.findViewById(R.id.btn_checkout);
+        view.findViewById(R.id.include_demo)
+                .setVisibility(DemoCatalog.AMBIENTE_DEMO ? View.VISIBLE : View.GONE);
         rv.setLayoutManager(new LinearLayoutManager(requireContext()));
+        view.findViewById(R.id.btn_voltar_carrinho).setOnClickListener(v -> {
+            if (getActivity() != null) getActivity().getOnBackPressedDispatcher().onBackPressed();
+        });
 
         adapter = new CarrinhoAdapter(new CarrinhoAdapter.Listener() {
             @Override
@@ -57,6 +63,11 @@ public class CarrinhoFragment extends Fragment {
         });
         rv.setAdapter(adapter);
 
+        view.findViewById(R.id.btn_carrinho_ver_cardapio).setOnClickListener(v -> {
+            if (getActivity() instanceof BuyerMainActivity) {
+                ((BuyerMainActivity) getActivity()).openTab(R.id.nav_categorias);
+            }
+        });
         btnCheckout.setOnClickListener(v -> {
             if (CarrinhoManager.getInstance().getItens().isEmpty()) {
                 Toast.makeText(requireContext(), "Carrinho vazio", Toast.LENGTH_SHORT).show();
@@ -77,7 +88,7 @@ public class CarrinhoFragment extends Fragment {
         adapter.submit(cart.getItens());
         boolean empty = cart.getItens().isEmpty();
         txtVazio.setVisibility(empty ? View.VISIBLE : View.GONE);
-        txtTotal.setText("Total: " + MoneyUtils.format(cart.getTotal()));
+        txtTotal.setText(MoneyUtils.format(cart.getTotal()));
         btnCheckout.setEnabled(!empty);
     }
 }

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Informações do evento. CONTEÚDO DEMONSTRATIVO: substituir pelos textos oficiais. -->
+    <string name="evento_titulo_tela">Informações do evento</string>
+    <string name="evento_marca">Paella Beneficente</string>
+    <string name="evento_headline">Todo mundo cabe nessa mesa.</string>
+    <string name="evento_apoio">Um encontro que reúne sabor, comunidade e solidariedade.</string>
+    <string name="evento_banner_desc">Paella servida em panela de ferro com camarões, mexilhões e limão</string>
+
+    <string name="evento_data_rotulo">Data</string>
+    <string name="evento_data_valor">27 NOV 2026</string>
+    <string name="evento_data_dia">Sexta-feira</string>
+    <string name="evento_local_rotulo">Local</string>
+    <string name="evento_local_valor">Local a confirmar</string>
+    <string name="evento_local_nota">Localização demonstrativa. O endereço oficial será divulgado pela organização.</string>
+    <string name="evento_cta_cardapio">Explorar cardápio</string>
+
+    <string name="evento_proposito_titulo">Um prato com propósito</string>
+    <string name="evento_proposito_texto">Mais do que compartilhar uma refeição, a Paella Beneficente é uma oportunidade de reunir pessoas em torno da solidariedade.</string>
+
+    <string name="evento_abadeus_titulo">Por trás de cada encontro, uma causa.</string>
+    <string name="evento_abadeus_texto">A ABADEUS promove iniciativas voltadas ao desenvolvimento social e à comunidade. A Paella Beneficente é uma oportunidade de aproximar pessoas dessa missão.</string>
+
+    <string name="evento_participar_titulo">Como participar</string>
+    <string-array name="evento_passos_titulos">
+        <item>Escolha</item>
+        <item>Faça seu pedido</item>
+        <item>Acompanhe</item>
+    </string-array>
+    <string-array name="evento_passos_descricoes">
+        <item>Explore as opções do cardápio demonstrativo.</item>
+        <item>Adicione os produtos e conclua a compra simulada.</item>
+        <item>Consulte o status e visualize o QR Code demonstrativo.</item>
+    </string-array>
+    <array name="evento_passos_icones">
+        <item>@drawable/ic_nav_categories</item>
+        <item>@drawable/ic_nav_cart</item>
+        <item>@drawable/ic_nav_orders</item>
+    </array>
+
+    <string name="evento_duvidas_titulo">Dúvidas frequentes</string>
+    <string-array name="evento_faq_perguntas">
+        <item>Como faço um pedido?</item>
+        <item>O pagamento é real?</item>
+        <item>Como acompanho o pedido?</item>
+        <item>O QR Code funciona para retirada?</item>
+    </string-array>
+    <string-array name="evento_faq_respostas">
+        <item>Acesse o Cardápio, escolha os produtos e finalize o checkout demonstrativo.</item>
+        <item>Não. Todos os pagamentos são simulados nesta versão.</item>
+        <item>Acesse a aba Meus Pedidos.</item>
+        <item>Nesta versão, o QR Code é apenas demonstrativo.</item>
+    </string-array>
+
+    <string name="evento_rodape">Paella Beneficente · Uma iniciativa de ABADEUS\nConteúdo demonstrativo</string>
+    <string name="cd_expandir">Mostrar ou ocultar resposta</string>
+    <string name="home_cta_info">Informações do evento</string>
+</resources>

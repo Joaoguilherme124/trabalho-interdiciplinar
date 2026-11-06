@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_confirmacao"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brand_creme"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Cabeçalho vinho -->
+        <LinearLayout
+            android:id="@+id/header_confirmacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_paella_header"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/space_md"
+            android:paddingBottom="@dimen/space_lg"
+            android:paddingTop="@dimen/space_lg">
+
+            <ImageView
+                android:id="@+id/img_sucesso"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:contentDescription="@string/cd_sucesso"
+                android:src="@drawable/ic_check_circle" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_sm"
+                android:fontFamily="@font/barlow_condensed_bold"
+                android:text="@string/confirmacao_titulo"
+                android:textAllCaps="true"
+                android:textColor="@color/brand_creme"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/txt_numero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_variable"
+                android:textColor="@color/brand_acafrao"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Conteúdo creme -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/space_md">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/barlow_condensed_bold"
+                android:text="@string/confirmacao_itens"
+                android:textAllCaps="true"
+                android:textColor="@color/brand_vinho"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:id="@+id/lista_itens"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="@dimen/space_xs"
+                android:background="@color/line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/barlow_condensed_bold"
+                    android:text="@string/confirmacao_total"
+                    android:textAllCaps="true"
+                    android:textColor="@color/brand_grafite"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/txt_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/barlow_condensed_bold"
+                    android:textColor="@color/brand_vinho"
+                    android:textSize="28sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xs"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="@string/confirmacao_status"
+                    android:textColor="@color/brand_grafite_muted"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_paella_status"
+                    android:fontFamily="@font/inter_variable"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Aviso de demonstração -->
+            <LinearLayout
+                android:id="@+id/aviso_demo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md"
+                android:background="@drawable/bg_paella_chip"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/brand_paprica" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_variable"
+                    android:padding="@dimen/space_sm"
+                    android:text="@string/demo_sem_cobranca"
+                    android:textColor="@color/brand_grafite"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_ver_pedido"
+                style="@style/Widget.Paella.Button.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_lg"
+                android:fontFamily="@font/inter_variable"
+                android:text="@string/btn_ver_pedido" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_voltar_inicio"
+                style="@style/Widget.Paella.Button.Outline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xs"
+                android:fontFamily="@font/inter_variable"
+                android:text="@string/btn_voltar_inicio" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

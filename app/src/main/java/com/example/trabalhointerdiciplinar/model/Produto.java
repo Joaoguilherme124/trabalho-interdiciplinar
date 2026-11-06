@@ -11,6 +11,12 @@ public class Produto {
     private String urlImagem;
     private float avaliacao;
     private String categoria;
+    private String ingredientes = "";
+    private String porcao = "";
+    /** Tempo estimado de preparo em minutos (0 = não informado). */
+    private int tempoEstimadoMin;
+    /** Produto ativo no cardápio. Desativar não apaga: apenas deixa de ser publicado. */
+    private boolean disponivel = true;
 
     public Produto() {
     }
@@ -107,5 +113,37 @@ public class Produto {
 
     public void setCategoria(String categoria) {
         this.categoria = categoria;
+    }
+
+    public String getIngredientes() {
+        return ingredientes == null ? "" : ingredientes;
+    }
+
+    public void setIngredientes(String ingredientes) {
+        this.ingredientes = ingredientes;
+    }
+
+    public String getPorcao() {
+        return porcao == null ? "" : porcao;
+    }
+
+    public void setPorcao(String porcao) {
+        this.porcao = porcao;
+    }
+
+    public int getTempoEstimadoMin() {
+        return tempoEstimadoMin;
+    }
+
+    public void setTempoEstimadoMin(int tempoEstimadoMin) {
+        this.tempoEstimadoMin = Math.max(0, tempoEstimadoMin);
+    }
+
+    public boolean isDisponivel() {
+        return disponivel;
+    }
+
+    public void setDisponivel(boolean disponivel) {
+        this.disponivel = disponivel;
     }
 }

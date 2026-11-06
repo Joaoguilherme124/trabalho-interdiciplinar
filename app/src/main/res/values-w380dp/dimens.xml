@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Telas a partir de 380 dp (ex.: Pixel 8): o grafismo superior deixa mais espaço ao logotipo. -->
+    <dimen name="login_logo_margem_dir">112dp</dimen>
+</resources>

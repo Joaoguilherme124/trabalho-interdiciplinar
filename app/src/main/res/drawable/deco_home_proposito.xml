@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Grafismo do banner de propósito: módulos de quarto de círculo no canto direito. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="140dp"
+    android:viewportWidth="120"
+    android:viewportHeight="140">
+    <path
+        android:fillColor="#FFF5B82E"
+        android:pathData="M120,0L30,0A90,90 0 0 0 120,90Z" />
+    <path
+        android:fillColor="#FFE95032"
+        android:pathData="M120,0L65,0A55,55 0 0 0 120,55Z" />
+    <path
+        android:fillColor="#FF169F9A"
+        android:pathData="M120,140L84,140A36,36 0 0 1 120,104Z" />
+</vector>

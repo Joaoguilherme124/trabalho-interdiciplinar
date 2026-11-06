@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mapa_titulo">Mapa do evento</string>
+    <string name="mapa_dica">Toque em uma área para ver o que você encontra por lá.</string>
+    <string name="mapa_aviso">Mapa ilustrativo — distribuição demonstrativa.</string>
+    <string name="mapa_painel_vazio_titulo">Escolha uma área</string>
+    <string name="mapa_painel_vazio_texto">Selecione Entrada, Alimentação, Retirada de pedidos, Palco ou Banheiros.</string>
+    <string name="mapa_ver_programacao">Ver programação</string>
+    <string name="mapa_entrada_nome">Entrada</string>
+    <string name="mapa_entrada_desc">Ponto de chegada e recepção dos participantes.</string>
+    <string name="mapa_alimentacao_nome">Alimentação</string>
+    <string name="mapa_alimentacao_desc">Área da paella e das refeições. Aproveite com calma e boa companhia.</string>
+    <string name="mapa_retirada_nome">Retirada de pedidos</string>
+    <string name="mapa_retirada_desc">Apresente seu QR Code demonstrativo para retirar sua paella quando ela estiver pronta.</string>
+    <string name="mapa_palco_nome">Palco</string>
+    <string name="mapa_palco_desc">Espaço das atividades e atrações. Confira a programação demonstrativa.</string>
+    <string name="mapa_banheiros_nome">Banheiros</string>
+    <string name="mapa_banheiros_desc">Banheiros de apoio para os participantes.</string>
+</resources>

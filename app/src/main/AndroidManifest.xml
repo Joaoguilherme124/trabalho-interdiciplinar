@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- Android 13+: avisos locais do andamento do pedido (pedida em contexto, uma única vez). -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
+        android:name=".PaellaApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -14,7 +18,7 @@
         <activity
             android:name=".ui.auth.SplashActivity"
             android:exported="true"
-            android:theme="@style/Theme.TrabalhoInterDiciplinar.Splash"
+            android:theme="@style/Theme.TrabalhoInterDiciplinar.SplashMarca"
             android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,24 +29,38 @@
         <activity
             android:name=".ui.auth.LoginActivity"
             android:exported="false"
+            android:theme="@style/Theme.TrabalhoInterDiciplinar.Auth"
             android:windowSoftInputMode="adjustResize" />
 
-        <activity android:name=".ui.auth.CadastroActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.auth.CadastroActivity" android:exported="false" android:theme="@style/Theme.TrabalhoInterDiciplinar.Auth" android:windowSoftInputMode="adjustResize" />
         <activity android:name=".ui.auth.RecuperarSenhaActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
 
         <activity android:name=".ui.buyer.BuyerMainActivity" android:exported="false" />
-        <activity android:name=".ui.buyer.ProdutoDetalheActivity" android:exported="false" />
         <activity android:name=".ui.buyer.LojaDetalheActivity" android:exported="false" />
         <activity android:name=".ui.buyer.CheckoutActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.buyer.ConfirmacaoPedidoActivity" android:exported="false" />
+        <activity android:name=".ui.buyer.PedidoDetalheActivity" android:exported="false" />
+        <activity android:name=".ui.buyer.EventoInfoActivity" android:exported="false" />
+        <activity android:name=".ui.buyer.IngressoActivity" android:exported="false" />
+        <activity android:name=".ui.buyer.NotificacoesActivity" android:exported="false" />
+        <activity android:name=".ui.buyer.QrAmpliadoActivity" android:exported="false" />
+        <activity android:name=".ui.buyer.AcessibilidadeActivity" android:exported="false" />
+        <activity android:name=".ui.buyer.MapaEventoActivity" android:exported="false" />
+        <activity android:name=".ui.buyer.SimulacaoPainelActivity" android:exported="false" />
+        <activity android:name=".ui.buyer.EditarPerfilActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
 
         <activity android:name=".ui.merchant.MerchantMainActivity" android:exported="false" />
         <activity android:name=".ui.merchant.CadastroLojaActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.merchant.PedidoCozinhaActivity" android:exported="false" />
         <activity android:name=".ui.merchant.ProdutoFormActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
 
         <activity android:name=".ui.admin.AdminMainActivity" android:exported="false" />
 
         <!-- Mantido por compatibilidade; redireciona no onCreate se necessário -->
         <activity android:name=".MainActivity" android:exported="false" />
+
+        <!-- Alarme inexato de virada de etapa do pedido demonstrativo. -->
+        <receiver android:name=".data.simulacao.ReceptorEtapa" android:exported="false" />
     </application>
 
 </manifest>

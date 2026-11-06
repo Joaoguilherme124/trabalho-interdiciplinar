@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="login_headline_1">Todo mundo cabe</string>
+    <string name="login_headline_2">Nessa mesa.</string>
+    <string name="login_apoio">Entre para fazer parte deste encontro solidário.</string>
+    <string name="login_dev_titulo">Contas de teste</string>
+    <string name="login_dev_contas">joao@email.com · Participante
+maria@loja.com · Lojista
+admin@vitrine.com · Admin
+
+Senha de todas: 123
+
+(Aplicativo demonstrativo)</string>
+
+    <string name="cadastro_headline">Faça parte dessa mesa.</string>
+    <string name="cadastro_apoio">Crie sua conta e participe da Paella Beneficente.</string>
+    <string name="cadastro_nota">A conta criada é de participante.</string>
+    <string name="cadastro_erro_nome">Informe seu nome.</string>
+    <string name="cadastro_erro_email">Informe um e-mail válido.</string>
+    <string name="cadastro_erro_email_uso">Este e-mail já está cadastrado.</string>
+    <string name="cadastro_erro_senha">Crie uma senha.</string>
+    <string name="cadastro_voltar_login">Já tenho conta</string>
+    <string name="login_erro_credenciais">E-mail ou senha inválidos</string>
+
+    <string name="logo_cd">Paella Beneficente, uma iniciativa de ABADEUS</string>
+    <string name="login_erro_email_vazio">Informe seu e-mail.</string>
+    <string name="login_erro_senha_vazia">Informe sua senha.</string>
+    <string name="login_senha_mostrar">Mostrar senha</string>
+    <string name="login_senha_ocultar">Ocultar senha</string>
+    <string name="login_fechar">Fechar</string>
+</resources>

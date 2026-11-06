@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Pós-compra: confirmação, meus pedidos, detalhes e QR Code (demonstração) -->
+    <string name="confirmacao_titulo">Pedido registrado!</string>
+    <string name="confirmacao_itens">Seu pedido</string>
+    <string name="confirmacao_total">Total</string>
+    <string name="confirmacao_status">Status</string>
+    <string name="demo_sem_cobranca">Nenhuma cobrança real foi realizada</string>
+    <string name="btn_ver_pedido">Ver meu pedido</string>
+    <string name="btn_voltar_inicio">Voltar ao início</string>
+    <string name="cd_sucesso">Sucesso</string>
+
+    <string name="pedidos_vazio_titulo">Ainda não há pedidos.</string>
+    <string name="pedidos_vazio_texto">Quando você fizer um pedido, ele aparece aqui.</string>
+    <string name="pedidos_vazio_cta">Explorar cardápio</string>
+    <string name="pedidos_ver_detalhes">Ver detalhes</string>
+    <string name="pedidos_unidades">%1$d item(ns)</string>
+
+    <string name="pedido_titulo">Pedido</string>
+    <string name="pedido_nao_encontrado">Pedido não encontrado</string>
+    <string name="pedido_itens">Itens</string>
+    <string name="pedido_resumo">Resumo</string>
+    <string name="pedido_pagamento">Pagamento (simulado)</string>
+    <string name="pedido_data">Realizado em %1$s</string>
+    <string name="pedido_retirada_titulo">Retirada</string>
+    <string name="pedido_retirada_texto">Local e horário de retirada ainda não divulgados pela organização.</string>
+
+    <string name="qr_titulo">QR Code de demonstração</string>
+    <string name="qr_aviso">Demonstração: não vale como comprovante de pagamento nem como código de retirada.</string>
+    <string name="qr_cd">QR Code de demonstração do pedido %1$s</string>
+
+    <!-- Rótulos de categoria do Cardápio -->
+    <string name="tag_paella">Paella</string>
+    <string name="tag_combo">Combo</string>
+    <string name="tag_bebida">Bebida</string>
+    <string name="produto_nota_demo">Item e preço demonstrativos.</string>
+</resources>

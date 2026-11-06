@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="evento_programacao_titulo">Programação</string>
+    <string name="evento_programacao_nota">Programação demonstrativa. Os horários serão divulgados pela organização.</string>
+    <string name="evento_ver_mapa">Ver mapa do evento</string>
+    <string-array name="evento_programacao_titulos">
+        <item>Abertura</item>
+        <item>Gastronomia e convivência</item>
+        <item>Atividades e atrações</item>
+        <item>Encerramento</item>
+    </string-array>
+    <string-array name="evento_programacao_descricoes">
+        <item>Recepção dos participantes e boas-vindas ao encontro.</item>
+        <item>Paella e outras delícias para compartilhar, em boa companhia.</item>
+        <item>Momentos de integração e atrações ao longo do dia.</item>
+        <item>Agradecimento a quem fez o dia acontecer em favor da ABADEUS.</item>
+    </string-array>
+</resources>

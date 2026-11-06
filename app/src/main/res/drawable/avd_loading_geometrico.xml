@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_loading_geometrico">
+    <target
+        android:name="g_barra"
+        android:animation="@animator/loading_forma_a" />
+    <target
+        android:name="g_losango"
+        android:animation="@animator/loading_forma_b" />
+    <target
+        android:name="g_quadrado"
+        android:animation="@animator/loading_forma_c" />
+</animated-vector>

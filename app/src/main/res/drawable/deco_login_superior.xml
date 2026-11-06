@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Grafismo do canto superior direito: quarto de círculo vinho com açafrão sobreposto. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="180dp"
+    android:height="200dp"
+    android:viewportWidth="180"
+    android:viewportHeight="200">
+    <path
+        android:fillColor="#FF6A234F"
+        android:pathData="M180,0L20,0A160,160 0 0 0 180,160Z" />
+    <path
+        android:fillColor="#FFF5B82E"
+        android:pathData="M180,70L55,70A125,125 0 0 0 180,195Z" />
+</vector>

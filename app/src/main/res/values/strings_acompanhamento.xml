@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="acomp_titulo">Acompanhando seu pedido</string>
+    <string name="acomp_subtitulo_min">Pedido %1$s · aprox. %2$d min</string>
+    <string name="acomp_subtitulo">Pedido %1$s</string>
+    <string name="acomp_subtitulo_mais">Pedido %1$s +%2$d · aprox. %3$d min</string>
+    <string name="acomp_subtitulo_mais_sem_tempo">Pedido %1$s +%2$d</string>
+    <string name="acomp_chip_min">≈ %1$d min</string>
+    <string name="acomp_chip_pronto">Disponível para retirada</string>
+    <string name="acomp_chip_sem_previsao">Em andamento</string>
+    <string-array name="acomp_etapas">
+        <item>Recebido</item>
+        <item>Em preparo</item>
+        <item>Quase pronto</item>
+        <item>Retirada</item>
+    </string-array>
+    <string name="acomp_etapa_pronta">Pronto para retirar</string>
+    <string-array name="acomp_frases">
+        <item>Seu pedido foi registrado.</item>
+        <item>Sua paella está sendo preparada.</item>
+        <item>Sua paella está quase pronta.</item>
+        <item>Sua paella está pronta!</item>
+    </string-array>
+    <string name="acomp_mostrar_qr">Mostrar QR Code</string>
+    <string name="acomp_cd">Pedido %1$s, %2$s, etapa %3$d de 4. %4$s Toque para acompanhar.</string>
+    <string name="acomp_cd_previsao">Previsão demonstrativa de aproximadamente %1$d minutos.</string>
+    <string name="acomp_cd_sem_previsao">Sem previsão informada.</string>
+    <string name="acomp_cd_pronto">Disponível para retirada.</string>
+    <string name="acomp_cd_etapa_concluida">%1$s, concluída</string>
+    <string name="acomp_cd_etapa_atual">%1$s, etapa atual</string>
+    <string name="acomp_cd_etapa_futura">%1$s, ainda não iniciada</string>
+</resources>

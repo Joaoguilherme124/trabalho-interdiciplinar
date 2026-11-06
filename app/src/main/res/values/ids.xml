@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Destino semântico do Carrinho: não é mais item da barra inferior, mas continua sendo o id
+         aceito por EXTRA_ABRIR_ABA / openTab para abrir a tela do Carrinho. -->
+    <item name="nav_carrinho" type="id" />
+</resources>

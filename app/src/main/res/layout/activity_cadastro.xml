@@ -1,101 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scroll_auth"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_app"
+    android:background="@color/brand_creme"
     android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="24dp">
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <include layout="@layout/view_auth_header" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="@string/cadastro_title"
-            android:textColor="@color/text_dark"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:orientation="vertical"
+            android:padding="@dimen/space_lg">
 
-        <EditText
-            android:id="@+id/edt_nome"
-            android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/bg_input"
-            android:hint="@string/hint_nome"
-            android:inputType="textPersonName"
-            android:paddingHorizontal="16dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/barlow_condensed_bold"
+                android:text="@string/cadastro_headline"
+                android:textAllCaps="true"
+                android:textColor="@color/brand_vinho"
+                android:textSize="40sp" />
 
-        <EditText
-            android:id="@+id/edt_email"
-            android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/bg_input"
-            android:hint="@string/hint_email"
-            android:inputType="textEmailAddress"
-            android:paddingHorizontal="16dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/inter_variable"
+                android:text="@string/cadastro_apoio"
+                android:textColor="@color/brand_grafite_muted"
+                android:textSize="15sp" />
 
-        <EditText
-            android:id="@+id/edt_senha"
-            android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/bg_input"
-            android:hint="@string/hint_senha"
-            android:inputType="textPassword"
-            android:paddingHorizontal="16dp" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_nome"
+                style="@style/Widget.Paella.TextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_lg"
+                android:hint="@string/hint_nome">
 
-        <EditText
-            android:id="@+id/edt_telefone"
-            android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/bg_input"
-            android:hint="@string/hint_telefone"
-            android:inputType="phone"
-            android:paddingHorizontal="16dp" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_nome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="name"
+                    android:inputType="textPersonName|textCapWords"
+                    android:minHeight="@dimen/touch_target"
+                    android:textAppearance="@style/TextAppearance.Paella.CampoTexto" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
-            android:id="@+id/edt_endereco"
-            android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/bg_input"
-            android:hint="@string/hint_endereco"
-            android:inputType="textPostalAddress"
-            android:paddingHorizontal="16dp" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_email"
+                style="@style/Widget.Paella.TextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_sm"
+                android:hint="@string/hint_email">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/tipo_conta"
-            android:textColor="@color/text_muted"
-            android:textSize="12sp"
-            android:textStyle="bold" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="emailAddress"
+                    android:inputType="textEmailAddress"
+                    android:minHeight="@dimen/touch_target"
+                    android:textAppearance="@style/TextAppearance.Paella.CampoTexto" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <Spinner
-            android:id="@+id/spinner_tipo"
-            android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_marginTop="6dp"
-            android:background="@drawable/bg_input"
-            android:paddingHorizontal="8dp" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_senha"
+                style="@style/Widget.Paella.TextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_sm"
+                android:hint="@string/hint_senha"
+                app:endIconMode="password_toggle">
 
-        <TextView
-            android:id="@+id/btn_cadastrar"
-            android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/bg_btn_primary"
-            android:gravity="center"
-            android:text="@string/btn_cadastrar"
-            android:textColor="@color/text_dark"
-            android:textStyle="bold" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_senha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="newPassword"
+                    android:inputType="textPassword"
+                    android:minHeight="@dimen/touch_target"
+                    android:textAppearance="@style/TextAppearance.Paella.CampoTexto" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Paella.TextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_sm"
+                android:hint="@string/hint_telefone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_telefone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="phone"
+                    android:inputType="phone"
+                    android:minHeight="@dimen/touch_target"
+                    android:textAppearance="@style/TextAppearance.Paella.CampoTexto" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Paella.TextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_sm"
+                android:hint="@string/hint_endereco">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_endereco"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="postalAddress"
+                    android:inputType="textPostalAddress|textCapSentences"
+                    android:minHeight="@dimen/touch_target"
+                    android:textAppearance="@style/TextAppearance.Paella.CampoTexto" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xs"
+                android:fontFamily="@font/inter_variable"
+                android:text="@string/cadastro_nota"
+                android:textColor="@color/brand_grafite_muted"
+                android:textSize="12sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_cadastrar"
+                style="@style/Widget.Paella.Button.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md"
+                android:fontFamily="@font/inter_variable"
+                android:text="@string/btn_cadastrar" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/link_voltar_login"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_variable"
+                android:minHeight="@dimen/touch_target"
+                android:text="@string/cadastro_voltar_login"
+                android:textColor="@color/brand_vinho" />
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>

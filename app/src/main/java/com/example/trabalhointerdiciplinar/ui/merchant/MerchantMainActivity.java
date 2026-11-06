@@ -45,6 +45,7 @@ public class MerchantMainActivity extends AppCompatActivity {
             } else {
                 fragment = new MerchantDashboardFragment();
             }
+            bottomNav.performHapticFeedback(android.view.HapticFeedbackConstants.CLOCK_TICK);
             getSupportFragmentManager()
                     .beginTransaction()
                     .replace(R.id.fragment_container, fragment)
@@ -54,6 +55,16 @@ public class MerchantMainActivity extends AppCompatActivity {
 
         if (savedInstanceState == null) {
             bottomNav.setSelectedItemId(R.id.nav_dashboard);
+            // "Cozinha" já vem marcada no menu e não dispara o listener: garante o fragmento inicial.
+            if (getSupportFragmentManager().findFragmentById(R.id.fragment_container) == null) {
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragment_container, new MerchantDashboardFragment()).commit();
+            }
         }
+    }
+
+    /** Atalho da Central da Cozinha para a Fila de pedidos. */
+    public void abrirFila() {
+        ((BottomNavigationView) findViewById(R.id.bottom_nav)).setSelectedItemId(R.id.nav_pedidos_loja);
     }
 }

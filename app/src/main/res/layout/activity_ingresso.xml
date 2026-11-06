@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_ingresso"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brand_creme"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include_demo"
+        layout="@layout/view_demo_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/space_md">
+
+            <TextView
+                android:id="@+id/btn_voltar"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/touch_target"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_back"
+                android:drawablePadding="6dp"
+                android:drawableTint="@color/brand_vinho"
+                android:focusable="true"
+                android:fontFamily="@font/inter_variable"
+                android:gravity="center_vertical"
+                android:text="@string/detalhe_voltar"
+                android:textColor="@color/brand_vinho"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/barlow_condensed_bold"
+                android:includeFontPadding="false"
+                android:text="@string/ingresso_titulo"
+                android:textAllCaps="true"
+                android:textColor="@color/brand_vinho"
+                android:textSize="36sp" />
+
+            <!-- Ingresso -->
+            <FrameLayout
+                android:id="@+id/cartao_ingresso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md"
+                android:background="@drawable/bg_home_proposito"
+                android:clipToOutline="true">
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="128dp"
+                    android:layout_gravity="top|end"
+                    android:importantForAccessibility="no"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/deco_home_proposito" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/barlow_condensed_bold"
+                        android:includeFontPadding="false"
+                        android:text="@string/home_marca_ingresso"
+                        android:textAllCaps="true"
+                        android:textColor="@color/brand_creme"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_variable"
+                        android:letterSpacing="0.14"
+                        android:text="@string/auth_abadeus_curto"
+                        android:textColor="@color/brand_acafrao"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:fontFamily="@font/inter_variable"
+                        android:text="@string/ingresso_participante"
+                        android:textAllCaps="true"
+                        android:textColor="#B3FFF7EA"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_ingresso_participante"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/barlow_condensed_bold"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/brand_creme"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/txt_ingresso_pedido"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/inter_variable"
+                        android:textColor="@color/brand_creme"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txt_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_paella_status"
+                        android:fontFamily="@font/inter_variable"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="3dp"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <!-- Linha tracejada de "ingresso" -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="16dp"
+                        android:alpha="0.35"
+                        android:background="@color/brand_creme"
+                        android:importantForAccessibility="no" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/img_qr"
+                            android:layout_width="230dp"
+                            android:layout_height="230dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/bg_ingresso_qr"
+                            android:padding="14dp" />
+
+                        <LinearLayout
+                            android:id="@+id/bloco_retirado"
+                            android:layout_width="230dp"
+                            android:layout_height="230dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/bg_ingresso_retirado"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16dp"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="56dp"
+                                android:layout_height="56dp"
+                                android:importantForAccessibility="no"
+                                android:src="@drawable/ic_check_circle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/barlow_condensed_bold"
+                                android:text="@string/ingresso_retirado_titulo"
+                                android:textColor="@color/brand_vinho"
+                                android:textSize="24sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/inter_variable"
+                                android:gravity="center"
+                                android:text="@string/ingresso_retirado_texto"
+                                android:textColor="@color/brand_grafite"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/faixa_apresente"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/brand_acafrao"
+                        android:fontFamily="@font/barlow_condensed_bold"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="8dp"
+                        android:text="@string/ingresso_apresente"
+                        android:textColor="@color/brand_vinho"
+                        android:textSize="20sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/inter_variable"
+                        android:gravity="center"
+                        android:text="@string/ingresso_aviso"
+                        android:textColor="#CCFFF7EA"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_ampliar_qr"
+                style="@style/Widget.Paella.Button.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md"
+                android:fontFamily="@font/inter_variable"
+                android:text="@string/qr_ampliar"
+                android:textColor="@color/brand_vinho"
+                android:visibility="gone" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_simular_retirada"
+                style="@style/Widget.Paella.Button.Outline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md"
+                android:fontFamily="@font/inter_variable"
+                android:text="@string/ingresso_simular_retirada"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

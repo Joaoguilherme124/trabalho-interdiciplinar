@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Montagem da geometria da marca (~0,85 s). Usado como ícone animado do splash do sistema. -->
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_splash_marca">
+    <target
+        android:name="g_losango"
+        android:animation="@animator/splash_losango" />
+    <target
+        android:name="g_quadrado"
+        android:animation="@animator/splash_quadrado" />
+    <target
+        android:name="p_arco"
+        android:animation="@animator/splash_arco" />
+    <target
+        android:name="g_barra"
+        android:animation="@animator/splash_barra" />
+</animated-vector>

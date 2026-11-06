@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sheet_fechar_cd">Fechar detalhes do produto</string>
+    <string name="sheet_quem_prepara">Quem prepara</string>
+    <string name="sheet_ver_loja">Ver loja</string>
+    <string name="sheet_adicionar">Adicionar ao pedido</string>
+    <string name="sheet_retirada_info">Retirada no evento, com o QR Code demonstrativo do seu pedido.</string>
+    <string name="sheet_loja_sem_descricao">Loja participante do evento.</string>
+    <string name="sheet_produto_indisponivel">Este produto não está mais disponível.</string>
+    <string name="cd_aumentar_qtd_de">Aumentar quantidade de %1$s</string>
+    <string name="cd_diminuir_qtd_de">Diminuir quantidade de %1$s</string>
+    <string name="cd_qtd_atual">%1$d unidade(s)</string>
+</resources>

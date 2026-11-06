@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_acessibilidade"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brand_creme"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include_demo"
+        layout="@layout/view_demo_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/space_md">
+
+            <TextView
+                android:id="@+id/btn_voltar"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/touch_target"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_back"
+                android:drawablePadding="6dp"
+                android:drawableTint="@color/brand_vinho"
+                android:focusable="true"
+                android:fontFamily="@font/inter_variable"
+                android:gravity="center_vertical"
+                android:text="@string/detalhe_voltar"
+                android:textColor="@color/brand_vinho"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:accessibilityHeading="true"
+                android:fontFamily="@font/barlow_condensed_bold"
+                android:includeFontPadding="false"
+                android:text="@string/acess_titulo"
+                android:textAllCaps="true"
+                android:textColor="@color/brand_vinho"
+                android:textSize="36sp" />
+
+            <!-- Tamanho do texto -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md"
+                android:background="@drawable/bg_home_card"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="@string/acess_texto_titulo"
+                    android:textColor="@color/brand_vinho"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="@string/acess_texto_desc"
+                    android:textColor="@color/brand_grafite_muted"
+                    android:textSize="13sp" />
+
+                <RadioGroup
+                    android:id="@+id/grupo_texto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp">
+
+                    <RadioButton
+                        android:id="@+id/rb_texto_padrao"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/brand_vinho"
+                        android:fontFamily="@font/inter_variable"
+                        android:minHeight="48dp"
+                        android:text="@string/acess_texto_padrao"
+                        android:textColor="@color/brand_grafite"
+                        android:textSize="15sp" />
+
+                    <RadioButton
+                        android:id="@+id/rb_texto_maior"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/brand_vinho"
+                        android:fontFamily="@font/inter_variable"
+                        android:minHeight="48dp"
+                        android:text="@string/acess_texto_maior"
+                        android:textColor="@color/brand_grafite"
+                        android:textSize="15sp" />
+
+                    <RadioButton
+                        android:id="@+id/rb_texto_muito_maior"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/brand_vinho"
+                        android:fontFamily="@font/inter_variable"
+                        android:minHeight="48dp"
+                        android:text="@string/acess_texto_muito_maior"
+                        android:textColor="@color/brand_grafite"
+                        android:textSize="15sp" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/barlow_condensed_bold"
+                    android:text="@string/acess_texto_exemplo"
+                    android:textColor="@color/brand_vinho"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+            <!-- Alto contraste -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_sm"
+                android:background="@drawable/bg_home_card"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/touch_target"
+                android:orientation="horizontal"
+                android:padding="14dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_variable"
+                        android:text="@string/acess_contraste_titulo"
+                        android:textColor="@color/brand_vinho"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_variable"
+                        android:text="@string/acess_contraste_desc"
+                        android:textColor="@color/brand_grafite_muted"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switch_contraste"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:contentDescription="@string/acess_contraste_titulo" />
+            </LinearLayout>
+
+            <!-- Reduzir animações -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_sm"
+                android:background="@drawable/bg_home_card"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/touch_target"
+                android:orientation="horizontal"
+                android:padding="14dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_variable"
+                        android:text="@string/acess_animacoes_titulo"
+                        android:textColor="@color/brand_vinho"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_variable"
+                        android:text="@string/acess_animacoes_desc"
+                        android:textColor="@color/brand_grafite_muted"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switch_animacoes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:contentDescription="@string/acess_animacoes_titulo" />
+            </LinearLayout>
+
+            <!-- Leitor de tela -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_sm"
+                android:background="@drawable/bg_home_card"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="@string/acess_sistema_titulo"
+                    android:textColor="@color/brand_vinho"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="@string/acess_sistema_desc"
+                    android:textColor="@color/brand_grafite_muted"
+                    android:textSize="13sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_config_sistema"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:minHeight="48dp"
+                    android:text="@string/acess_sistema_botao"
+                    android:textColor="@color/brand_vinho"
+                    app:strokeColor="@color/brand_vinho" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

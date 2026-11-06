@@ -2,40 +2,85 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_app"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:background="@color/brand_creme"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <include
+        android:id="@+id/include_demo"
+        layout="@layout/view_demo_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="12dp"
+        android:accessibilityHeading="true"
+        android:fontFamily="@font/barlow_condensed_bold"
+        android:includeFontPadding="false"
+        android:text="@string/produtos_titulo"
+        android:textAllCaps="true"
+        android:textColor="@color/brand_vinho"
+        android:textSize="36sp" />
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/nav_produtos"
-            android:textColor="@color/text_dark"
-            android:textSize="22sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/btn_novo"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:background="@drawable/bg_btn_primary"
-            android:gravity="center"
-            android:paddingHorizontal="14dp"
-            android:text="@string/novo_produto"
-            android:textColor="@color/text_dark"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_produtos"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_novo"
+        style="@style/Widget.Paella.Button.Primary"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="12dp" />
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/inter_variable"
+        android:minHeight="52dp"
+        android:text="@string/produtos_novo"
+        android:textColor="@color/brand_vinho" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_produtos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp" />
+
+        <LinearLayout
+            android:id="@+id/estado_vazio_produtos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="40dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txt_vazio_titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/barlow_condensed_bold"
+                android:gravity="center"
+                android:text="@string/produtos_vazio_titulo"
+                android:textAllCaps="true"
+                android:textColor="@color/brand_vinho"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/txt_vazio_texto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/inter_variable"
+                android:gravity="center"
+                android:text="@string/produtos_vazio_texto"
+                android:textColor="@color/brand_grafite_muted"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </FrameLayout>
 </LinearLayout>

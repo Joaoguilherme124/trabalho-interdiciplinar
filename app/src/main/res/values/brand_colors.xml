@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Manual de Marca — Paella Beneficente ABADEUS -->
+    <color name="brand_vinho">#FF6A234F</color>
+    <color name="brand_acafrao">#FFF5B82E</color>
+    <color name="brand_paprica">#FFE95032</color>
+    <color name="brand_mediterraneo">#FF169F9A</color>
+    <color name="brand_creme">#FFFFF7EA</color>
+    <color name="brand_grafite">#FF26282D</color>
+    <color name="brand_grafite_muted">#FF5F6168</color>
+    <color name="brand_scrim">#CC26282D</color>
+    <!-- Trecho ainda não percorrido da linha de acompanhamento (neutro). -->
+    <color name="brand_acafrao_apagado">#4D26282D</color>
+</resources>

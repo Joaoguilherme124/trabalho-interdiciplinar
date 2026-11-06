@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Títulos: Barlow Condensed. Textos e UI: Inter (Manual de Marca). -->
+    <style name="TextAppearance.Paella.Display" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:fontFamily">@font/barlow_condensed_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/brand_vinho</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="TextAppearance.Paella.Title" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:fontFamily">@font/barlow_condensed_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/brand_grafite</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="TextAppearance.Paella.Body" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:fontFamily">@font/inter_variable</item>
+        <item name="android:textColor">@color/brand_grafite</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineSpacingExtra">3sp</item>
+    </style>
+
+    <style name="TextAppearance.Paella.Caption" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:fontFamily">@font/inter_variable</item>
+        <item name="android:textColor">@color/brand_grafite_muted</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="Widget.Paella.Button.Primary" parent="Widget.Material3.Button">
+        <item name="android:fontFamily">@font/inter_variable</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/paella_botao_texto</item>
+        <item name="android:minHeight">@dimen/touch_target</item>
+        <item name="backgroundTint">@color/paella_botao_fundo</item>
+        <item name="cornerRadius">@dimen/radius_brand</item>
+    </style>
+
+    <style name="Widget.Paella.Button.Outline" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:fontFamily">@font/inter_variable</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/brand_vinho</item>
+        <item name="android:minHeight">@dimen/touch_target</item>
+        <item name="strokeColor">@color/brand_vinho</item>
+        <item name="strokeWidth">1.5dp</item>
+        <item name="cornerRadius">@dimen/radius_brand</item>
+        <item name="rippleColor">@color/brand_vinho</item>
+    </style>
+
+    <!-- Campo de texto de formulário (EditText) -->
+    <style name="Widget.Paella.Campo" parent="android:Widget.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:background">@drawable/bg_paella_chip</item>
+        <item name="android:fontFamily">@font/inter_variable</item>
+        <item name="android:minHeight">@dimen/touch_target</item>
+        <item name="android:paddingHorizontal">14dp</item>
+        <item name="android:textColor">@color/brand_grafite</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <!-- Campo de formulário com TextInputLayout (login/cadastro): borda 8 dp, vinho ao focar. -->
+    <style name="Widget.Paella.TextInput" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">@dimen/radius_brand</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/radius_brand</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/radius_brand</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/radius_brand</item>
+        <item name="boxStrokeColor">@color/paella_campo_borda</item>
+        <item name="boxStrokeErrorColor">@color/brand_paprica</item>
+        <item name="errorTextColor">@color/brand_paprica</item>
+        <item name="hintTextColor">@color/brand_vinho</item>
+        <item name="android:textColorHint">@color/brand_grafite_muted</item>
+        <item name="endIconTint">@color/brand_vinho</item>
+        <item name="boxBackgroundColor">@color/white</item>
+    </style>
+
+    <style name="TextAppearance.Paella.CampoTexto" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:fontFamily">@font/inter_variable</item>
+        <item name="android:textColor">@color/brand_grafite</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- Telas de entrada: barra de status vinho, combinando com o cabeçalho da marca. -->
+    <style name="Theme.TrabalhoInterDiciplinar.Auth" parent="Theme.TrabalhoInterDiciplinar">
+        <item name="android:statusBarColor">@color/brand_creme</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowBackground">@color/brand_creme</item>
+    </style>
+
+    <!-- Splash: fundo vinho já na janela, sem animação nem atraso. -->
+    <style name="Theme.TrabalhoInterDiciplinar.SplashMarca" parent="Theme.TrabalhoInterDiciplinar">
+        <item name="android:statusBarColor">@color/brand_creme</item>
+        <item name="android:navigationBarColor">@color/brand_creme</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowBackground">@color/brand_creme</item>
+        <item name="android:windowSplashScreenBackground" tools:targetApi="31">@color/brand_creme</item>
+        <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="31">@drawable/avd_splash_marca</item>
+        <item name="android:windowSplashScreenAnimationDuration" tools:targetApi="31">900</item>
+    </style>
+</resources>

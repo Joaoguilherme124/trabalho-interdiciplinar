@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Início. Textos de DEMONSTRAÇÃO (horário e local) concentrados aqui para troca fácil. -->
+    <string name="home_subtitulo">Que bom ter você aqui!</string>
+    <string name="home_sino_cd">Notificações</string>
+    <string name="home_sem_notificacoes">Você não tem novas notificações.</string>
+    <string name="home_notificacao_titulo">Notificações</string>
+
+    <string name="home_banner_dia">Sexta-feira</string>
+    <string name="home_banner_chamada_dupla">Uma mesa,\nmuitas histórias.</string>
+    <string name="home_banner_data_dia_mes">27 NOV</string>
+    <string name="home_banner_data_ano">2026</string>
+
+    <string name="home_atalho_cardapio">Ver cardápio</string>
+    <string name="home_atalho_pedidos">Meus pedidos</string>
+    <string name="home_atalho_qr">Meu QR Code</string>
+    <string name="home_atalho_evento">Sobre o evento</string>
+
+    <string name="home_qr_vazio_titulo">Meu QR Code</string>
+    <string name="home_qr_vazio_texto">Você ainda não tem um QR Code. Faça um pedido para gerar o QR Code de demonstração.</string>
+    <string name="home_qr_vazio_acao">Ver cardápio</string>
+
+    <string name="home_status_pendente">Seu pedido foi registrado</string>
+    <string name="home_status_separacao">Seu pedido está em separação</string>
+    <string name="home_status_enviado">Seu pedido foi enviado</string>
+    <string name="home_status_numero">Pedido %1$s</string>
+    <string name="home_status_acao">Ver pedido</string>
+
+    <string name="home_info_data_rotulo">Data do evento</string>
+    <string name="home_info_data_valor">27 de nov. de 2026</string>
+    <string name="home_info_horario_rotulo">Horário</string>
+    <string name="home_info_horario_valor">A partir das 19h</string>
+    <string name="home_info_local_rotulo">Local</string>
+    <string name="home_info_local_valor">ABADEUS</string>
+
+    <string name="home_proposito_l1">Todo mundo cabe</string>
+    <string name="home_proposito_l2">nessa mesa.</string>
+</resources>

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_mapa"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brand_creme"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include_demo"
+        layout="@layout/view_demo_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/space_md">
+
+            <TextView
+                android:id="@+id/btn_voltar"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/touch_target"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_back"
+                android:drawablePadding="6dp"
+                android:drawableTint="@color/brand_vinho"
+                android:focusable="true"
+                android:fontFamily="@font/inter_variable"
+                android:gravity="center_vertical"
+                android:text="@string/detalhe_voltar"
+                android:textColor="@color/brand_vinho"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/barlow_condensed_bold"
+                android:includeFontPadding="false"
+                android:text="@string/mapa_titulo"
+                android:textAllCaps="true"
+                android:textColor="@color/brand_vinho"
+                android:textSize="36sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/inter_variable"
+                android:text="@string/mapa_dica"
+                android:textColor="@color/brand_grafite_muted"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md"
+                android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:minHeight="96dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/zona_palco"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_mapa_zona"
+                    android:clickable="true"
+                    android:contentDescription="@string/mapa_palco_nome"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_map_palco"
+                        app:tint="@color/brand_vinho" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/barlow_condensed_bold"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/mapa_palco_nome"
+                        android:textAllCaps="true"
+                        android:textColor="@color/brand_vinho"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:minHeight="96dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/zona_alimentacao"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_mapa_zona"
+                    android:clickable="true"
+                    android:contentDescription="@string/mapa_alimentacao_nome"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_home_cardapio"
+                        app:tint="@color/brand_vinho" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/barlow_condensed_bold"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/mapa_alimentacao_nome"
+                        android:textAllCaps="true"
+                        android:textColor="@color/brand_vinho"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/zona_retirada"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_mapa_zona"
+                    android:clickable="true"
+                    android:contentDescription="@string/mapa_retirada_nome"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_home_sacola"
+                        app:tint="@color/brand_vinho" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/barlow_condensed_bold"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/mapa_retirada_nome"
+                        android:textAllCaps="true"
+                        android:textColor="@color/brand_vinho"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:minHeight="96dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/zona_banheiros"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_mapa_zona"
+                    android:clickable="true"
+                    android:contentDescription="@string/mapa_banheiros_nome"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_map_banheiro"
+                        app:tint="@color/brand_vinho" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/barlow_condensed_bold"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/mapa_banheiros_nome"
+                        android:textAllCaps="true"
+                        android:textColor="@color/brand_vinho"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/zona_entrada"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_mapa_zona"
+                    android:clickable="true"
+                    android:contentDescription="@string/mapa_entrada_nome"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_map_entrada"
+                        app:tint="@color/brand_vinho" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/barlow_condensed_bold"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/mapa_entrada_nome"
+                        android:textAllCaps="true"
+                        android:textColor="@color/brand_vinho"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/painel_zona"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md"
+                android:background="@drawable/bg_home_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/txt_zona_titulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/barlow_condensed_bold"
+                    android:includeFontPadding="false"
+                    android:text="@string/mapa_painel_vazio_titulo"
+                    android:textAllCaps="true"
+                    android:textColor="@color/brand_vinho"
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/txt_zona_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="@string/mapa_painel_vazio_texto"
+                    android:textColor="@color/brand_grafite"
+                    android:textSize="14sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_zona_acao"
+                    style="@style/Widget.Paella.Button.Primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="@string/mapa_ver_programacao"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md"
+                android:fontFamily="@font/inter_variable"
+                android:text="@string/mapa_aviso"
+                android:textColor="@color/brand_grafite_muted"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

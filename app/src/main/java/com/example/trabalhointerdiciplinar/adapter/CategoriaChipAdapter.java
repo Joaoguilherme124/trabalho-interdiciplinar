@@ -28,6 +28,16 @@ public class CategoriaChipAdapter extends RecyclerView.Adapter<CategoriaChipAdap
         this.listener = listener;
     }
 
+    /** Seleciona um chip por nome (ex.: "Todos" ao limpar filtros). */
+    public void selecionar(String categoria) {
+        int novo = categorias.indexOf(categoria);
+        if (novo < 0 || novo == selected) return;
+        int antigo = selected;
+        selected = novo;
+        notifyItemChanged(antigo);
+        notifyItemChanged(novo);
+    }
+
     @NonNull
     @Override
     public VH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -41,7 +51,9 @@ public class CategoriaChipAdapter extends RecyclerView.Adapter<CategoriaChipAdap
         String cat = categorias.get(position);
         holder.chip.setText(cat);
         holder.chip.setBackgroundResource(position == selected
-                ? R.drawable.bg_chip_selected : R.drawable.bg_chip);
+                ? R.drawable.bg_paella_chip_selected : R.drawable.bg_paella_chip);
+        holder.chip.setTextColor(holder.chip.getResources().getColor(position == selected
+                ? R.color.brand_creme : R.color.brand_vinho, null));
         holder.chip.setOnClickListener(v -> {
             int old = selected;
             selected = holder.getBindingAdapterPosition();

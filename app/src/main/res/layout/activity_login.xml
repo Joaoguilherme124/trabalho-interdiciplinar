@@ -1,92 +1,302 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scroll_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_app"
+    android:background="@color/brand_creme"
     android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="24dp">
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
-            android:text="Vitrine"
-            android:textColor="@color/leaf"
-            android:textSize="36sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="@string/login_title"
-            android:textColor="@color/text_dark"
-            android:textSize="18sp" />
-
-        <TextView
+        <!-- Topo: logotipo oficial à esquerda e grafismo geométrico cortado na borda direita -->
+        <FrameLayout
+            android:id="@+id/topo_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/bg_card"
-            android:padding="12dp"
-            android:text="Demos:\njoao@email.com / 123 (Comprador)\nmaria@loja.com / 123 (Lojista)\nadmin@vitrine.com / 123 (Admin)"
-            android:textColor="@color/text_muted"
-            android:textSize="12sp" />
+            android:minHeight="208dp">
 
-        <EditText
-            android:id="@+id/edt_email"
-            android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/bg_input"
-            android:hint="@string/hint_email"
-            android:inputType="textEmailAddress"
-            android:paddingHorizontal="16dp" />
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="200dp"
+                android:layout_gravity="top|end"
+                android:importantForAccessibility="no"
+                android:scaleType="fitEnd"
+                android:src="@drawable/deco_login_superior" />
 
-        <EditText
-            android:id="@+id/edt_senha"
-            android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/bg_input"
-            android:hint="@string/hint_senha"
-            android:inputType="textPassword"
-            android:paddingHorizontal="16dp" />
+            <ImageView
+                android:id="@+id/img_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|start"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="@dimen/login_logo_margem_dir"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/logo_cd"
+                android:maxWidth="250dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo_paella_beneficente" />
+        </FrameLayout>
 
-        <TextView
-            android:id="@+id/btn_entrar"
-            android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/bg_btn_primary"
-            android:gravity="center"
-            android:text="@string/btn_entrar"
-            android:textColor="@color/text_dark"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/link_cadastro"
+        <LinearLayout
+            android:id="@+id/form_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:gravity="center"
-            android:padding="8dp"
-            android:text="@string/link_cadastro"
-            android:textColor="@color/leaf"
-            android:textStyle="bold" />
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp">
 
-        <TextView
-            android:id="@+id/link_recuperar"
+            <!-- Headline -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/barlow_condensed_bold"
+                android:includeFontPadding="false"
+                android:text="@string/login_headline_1"
+                android:textAllCaps="true"
+                android:textColor="@color/brand_vinho"
+                android:textSize="40sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/barlow_condensed_bold"
+                android:includeFontPadding="false"
+                android:text="@string/login_headline_2"
+                android:textAllCaps="true"
+                android:textColor="@color/brand_acafrao"
+                android:textSize="43sp" />
+
+            <View
+                android:layout_width="48dp"
+                android:layout_height="3dp"
+                android:layout_marginTop="14dp"
+                android:background="@color/brand_vinho"
+                android:importantForAccessibility="no" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:fontFamily="@font/inter_variable"
+                android:lineSpacingExtra="3sp"
+                android:text="@string/login_apoio"
+                android:textColor="@color/brand_grafite"
+                android:textSize="16sp" />
+
+            <!-- E-mail -->
+            <LinearLayout
+                android:id="@+id/campo_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:addStatesFromChildren="true"
+                android:background="@drawable/bg_login_campo"
+                android:gravity="center_vertical"
+                android:minHeight="56dp"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_login_email" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="#8CF5B82E"
+                    android:importantForAccessibility="no" />
+
+                <EditText
+                    android:id="@+id/edt_email"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:autofillHints="emailAddress"
+                    android:background="@null"
+                    android:fontFamily="@font/inter_variable"
+                    android:hint="@string/hint_email"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="yes"
+                    android:inputType="textEmailAddress|textNoSuggestions"
+                    android:maxLines="1"
+                    android:padding="0dp"
+                    android:textColor="@color/brand_grafite"
+                    android:textColorHint="@color/brand_grafite_muted"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/erro_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/inter_variable"
+                android:textColor="@color/brand_paprica"
+                android:textSize="13sp"
+                android:visibility="gone" />
+
+            <!-- Senha -->
+            <LinearLayout
+                android:id="@+id/campo_senha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:addStatesFromChildren="true"
+                android:background="@drawable/bg_login_campo"
+                android:gravity="center_vertical"
+                android:minHeight="56dp"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingEnd="4dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_login_lock" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="#8CF5B82E"
+                    android:importantForAccessibility="no" />
+
+                <EditText
+                    android:id="@+id/edt_senha"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:autofillHints="password"
+                    android:background="@null"
+                    android:fontFamily="@font/inter_variable"
+                    android:hint="@string/hint_senha"
+                    android:imeOptions="actionDone"
+                    android:importantForAutofill="yes"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:padding="0dp"
+                    android:textColor="@color/brand_grafite"
+                    android:textColorHint="@color/brand_grafite_muted"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/btn_olho"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_login_olho"
+                    android:contentDescription="@string/login_senha_mostrar"
+                    android:src="@drawable/ic_login_olho" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/erro_senha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/inter_variable"
+                android:textColor="@color/brand_paprica"
+                android:textSize="13sp"
+                android:visibility="gone" />
+
+            <!-- Ações -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_entrar"
+                style="@style/Widget.Paella.Button.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/inter_variable"
+                android:minHeight="56dp"
+                android:text="@string/btn_entrar"
+                android:textColor="@color/brand_vinho"
+                android:textSize="17sp"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/ic_login_seta"
+                app:iconGravity="end"
+                app:iconSize="24dp"
+                app:iconTint="@color/brand_vinho" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/link_cadastro"
+                style="@style/Widget.Paella.Button.Outline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/inter_variable"
+                android:minHeight="56dp"
+                android:text="@string/link_cadastro"
+                android:textSize="16sp"
+                app:backgroundTint="@color/brand_creme"
+                app:cornerRadius="10dp" />
+
+            <LinearLayout
+                android:id="@+id/link_recuperar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:minHeight="48dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingHorizontal="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="@string/link_recuperar"
+                    android:textColor="@color/brand_vinho"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/brand_acafrao"
+                    android:importantForAccessibility="no" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Base: grafismos nos cantos (some com o teclado aberto) -->
+        <FrameLayout
+            android:id="@+id/zona_inferior"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="8dp"
-            android:text="@string/link_recuperar"
-            android:textColor="@color/text_muted" />
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:minHeight="130dp">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="bottom|end"
+                android:importantForAccessibility="no"
+                android:scaleType="fitEnd"
+                android:src="@drawable/deco_login_inferior_dir" />
+
+            <ImageView
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_gravity="bottom|start"
+                android:importantForAccessibility="no"
+                android:scaleType="fitStart"
+                android:src="@drawable/deco_login_inferior_esq" />
+        </FrameLayout>
     </LinearLayout>
 </ScrollView>

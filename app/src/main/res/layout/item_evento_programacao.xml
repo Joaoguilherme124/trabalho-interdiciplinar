@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Bloco da programação demonstrativa: marcador, título e descrição, sem horários. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:background="@drawable/bg_home_card"
+    android:orientation="horizontal"
+    android:padding="14dp">
+
+    <View
+        android:id="@+id/prog_marcador"
+        android:layout_width="6dp"
+        android:layout_height="match_parent"
+        android:background="@color/brand_acafrao"
+        android:importantForAccessibility="no" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/prog_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/barlow_condensed_bold"
+            android:includeFontPadding="false"
+            android:textAllCaps="true"
+            android:textColor="@color/brand_vinho"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/prog_descricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/inter_variable"
+            android:textColor="@color/brand_grafite"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Barra de pedido do Cardápio: telas estreitas mostram 1 miniatura (+N), as demais 2. -->
+    <integer name="barra_max_miniaturas">1</integer>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="acess_titulo">Acessibilidade</string>
+    <string name="acess_perfil_desc">Texto, contraste e animações.</string>
+    <string name="acess_texto_titulo">Tamanho do texto</string>
+    <string name="acess_texto_desc">Soma-se ao tamanho de fonte escolhido nas configurações do Android.</string>
+    <string name="acess_texto_padrao">Padrão</string>
+    <string name="acess_texto_maior">Maior</string>
+    <string name="acess_texto_muito_maior">Muito maior</string>
+    <string name="acess_texto_exemplo">Paella Valenciana · R$ 44,00</string>
+    <string name="acess_contraste_titulo">Alto contraste</string>
+    <string name="acess_contraste_desc">Textos mais escuros e bordas mais firmes.</string>
+    <string name="acess_animacoes_titulo">Reduzir animações</string>
+    <string name="acess_animacoes_desc">Remove movimentos decorativos. O app também respeita a configuração do sistema.</string>
+    <string name="acess_sistema_titulo">Leitor de tela e outros recursos</string>
+    <string name="acess_sistema_desc">O aplicativo é compatível com o TalkBack. Ative-o nas configurações de acessibilidade do Android.</string>
+    <string name="acess_sistema_botao">Abrir configurações do Android</string>
+    <string name="acess_sistema_indisponivel">Não foi possível abrir as configurações do Android.</string>
+
+    <!-- QR ampliado -->
+    <string name="qr_ampliar">Ampliar QR</string>
+    <string name="qr_ampliado_titulo">Meu QR Code</string>
+    <string name="qr_ampliado_pedido_rotulo">Pedido</string>
+    <string name="qr_fechar">Fechar</string>
+    <string name="qr_brilho">Aumentar brilho</string>
+    <string name="qr_brilho_desc">Só nesta tela; volta ao normal ao fechar.</string>
+    <string name="qr_ampliado_aviso">QR Code demonstrativo: não vale como comprovante de pagamento nem como código de retirada real.</string>
+    <string name="qr_ampliado_apresente">Apresente este QR Code na retirada. Se a leitura falhar, informe o número do pedido.</string>
+</resources>

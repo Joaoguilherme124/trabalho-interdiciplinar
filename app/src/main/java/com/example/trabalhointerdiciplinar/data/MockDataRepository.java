@@ -46,48 +46,25 @@ public class MockDataRepository {
         usuarios.add(new Usuario("u4", "Carlos Vendedor", "carlos@loja.com", "123",
                 TipoUsuario.LOJISTA, "Rua Anita, 88 — Criciúma/SC", "(48) 97777-3003"));
 
-        lojas.add(new Loja("l1", "u2", "Tech Norte", "12.345.678/0001-90", "Eletrônicos",
-                4.7f, "", StatusLoja.APROVADA, "(48) 98888-2002",
-                "Av. Centenário, 450", "Gadgets e acessórios."));
-        lojas.add(new Loja("l2", "u4", "Moda Atlântica", "23.456.789/0001-01", "Moda",
-                4.5f, "", StatusLoja.APROVADA, "(48) 97777-3003",
-                "Rua Anita, 88", "Roupas casuais."));
-        lojas.add(new Loja("l3", "u2", "Padaria do Sol", "34.567.890/0001-12", "Alimentos",
-                4.9f, "", StatusLoja.APROVADA, "(48) 96666-4004",
-                "Rua das Flores, 10", "Pães e doces artesanais."));
+        lojas.add(new Loja(DemoCatalog.LOJA_ID, "u2", DemoCatalog.LOJA_NOME,
+                "00.000.000/0000-00", "Paellas", 0f, "", StatusLoja.APROVADA, "(48) 98888-2002",
+                "Local do evento a confirmar", "Loja do evento (dados de demonstração)."));
         lojas.add(new Loja("l4", "u4", "Casa & Lar", "45.678.901/0001-23", "Casa",
                 0f, "", StatusLoja.PENDENTE, "(48) 95555-5005",
                 "Rua Porto Alegre, 210", "Decoração e utensílios."));
 
-        produtos.add(new Produto("p1", "l1", "Tech Norte", "Fone Bluetooth Pro",
-                "Cancelamento de ruído e 30h de bateria.", 249.90, 25, "", 4.8f, "Eletrônicos"));
-        produtos.add(new Produto("p2", "l1", "Tech Norte", "Carregador GaN 65W",
-                "Compacto e rápido para notebook e celular.", 129.00, 40, "", 4.6f, "Eletrônicos"));
-        produtos.add(new Produto("p3", "l2", "Moda Atlântica", "Camiseta Atlântica",
-                "Algodão orgânico, corte relaxed.", 79.90, 60, "", 4.4f, "Moda"));
-        produtos.add(new Produto("p4", "l2", "Moda Atlântica", "Jaqueta Vento",
-                "Leve, impermeável e dobrável.", 189.00, 15, "", 4.7f, "Moda"));
-        produtos.add(new Produto("p5", "l3", "Padaria do Sol", "Pão Sourdough",
-                "Fermentação natural, crosta crocante.", 18.90, 30, "", 4.9f, "Alimentos"));
-        produtos.add(new Produto("p6", "l3", "Padaria do Sol", "Kit Café da Manhã",
-                "Pão, frios, suco e café.", 32.00, 20, "", 4.8f, "Alimentos"));
-        produtos.add(new Produto("p7", "l1", "Tech Norte", "Mouse Sem Fio",
-                "Ergonômico com sensor de alta precisão.", 89.90, 50, "", 4.3f, "Eletrônicos"));
-        produtos.add(new Produto("p8", "l2", "Moda Atlântica", "Tênis Casual",
-                "Conforto para o dia a dia.", 219.00, 12, "", 4.5f, "Moda"));
+        produtos.addAll(DemoCatalog.produtos());
 
-        List<ItemPedido> itens1 = Arrays.asList(
-                new ItemPedido("p1", "Fone Bluetooth Pro", 1, 249.90)
-        );
-        pedidos.add(new Pedido("ped1", "u1", "l1", "Tech Norte", itens1, 249.90,
-                FormaPagamento.PIX, StatusPedido.SEPARACAO, "22/10/2026",
+        // Pedidos de demonstração em estados diferentes (nenhuma cobrança real).
+        pedidos.add(new Pedido("ped1", "u1", DemoCatalog.LOJA_ID, DemoCatalog.LOJA_NOME,
+                Arrays.asList(new ItemPedido("p4", "Combo Paella Mista + Suco", 1, 48.00)),
+                48.00, FormaPagamento.PIX, StatusPedido.SEPARACAO, "05/11/2026",
                 "Rua das Flores, 120 — Criciúma/SC"));
-
-        List<ItemPedido> itens2 = Arrays.asList(
-                new ItemPedido("p5", "Pão Sourdough", 2, 18.90)
-        );
-        pedidos.add(new Pedido("ped2", "u1", "l3", "Padaria do Sol", itens2, 37.80,
-                FormaPagamento.CARTAO, StatusPedido.ENVIADO, "20/10/2026",
+        pedidos.add(new Pedido("ped2", "u1", DemoCatalog.LOJA_ID, DemoCatalog.LOJA_NOME,
+                Arrays.asList(
+                        new ItemPedido("p3", "Paella Valenciana", 2, 44.00),
+                        new ItemPedido("p7", "Água com Gás", 2, 5.00)),
+                98.00, FormaPagamento.CARTAO, StatusPedido.ENTREGUE, "04/11/2026",
                 "Rua das Flores, 120 — Criciúma/SC"));
     }
 
@@ -96,6 +73,20 @@ public class MockDataRepository {
             if (u.getEmail().equalsIgnoreCase(email) && u.getSenha().equals(senha)) {
                 return u;
             }
+        }
+        return null;
+    }
+
+    public Usuario getUsuarioById(String id) {
+        for (Usuario u : usuarios) {
+            if (u.getId().equals(id)) return u;
+        }
+        return null;
+    }
+
+    public Usuario getUsuarioPorEmail(String email) {
+        for (Usuario u : usuarios) {
+            if (u.getEmail().equalsIgnoreCase(email)) return u;
         }
         return null;
     }
@@ -151,6 +142,19 @@ public class MockDataRepository {
         lojas.add(loja);
     }
 
+    /** Atualiza os dados da loja e o nome exibido em seus produtos (mesma loja em todo o app). */
+    public void atualizarLoja(Loja loja) {
+        for (int i = 0; i < lojas.size(); i++) {
+            if (lojas.get(i).getId().equals(loja.getId())) {
+                lojas.set(i, loja);
+                break;
+            }
+        }
+        for (Produto p : produtos) {
+            if (p.getIdLoja().equals(loja.getId())) p.setNomeLoja(loja.getNome());
+        }
+    }
+
     public void atualizarStatusLoja(String id, StatusLoja status) {
         Loja l = getLojaById(id);
         if (l != null) l.setStatus(status);
@@ -167,6 +171,22 @@ public class MockDataRepository {
         return null;
     }
 
+    /** Regra de publicação: produto disponível, de loja aprovada, aparece para os participantes. */
+    public boolean estaPublicado(Produto p) {
+        if (p == null || !p.isDisponivel()) return false;
+        Loja l = getLojaById(p.getIdLoja());
+        return l != null && l.getStatus() == StatusLoja.APROVADA;
+    }
+
+    /** Produtos da loja visíveis aos participantes (a gestão da loja usa getProdutosPorLoja). */
+    public List<Produto> getProdutosPublicadosDaLoja(String lojaId) {
+        List<Produto> result = new ArrayList<>();
+        for (Produto p : getProdutosPorLoja(lojaId)) {
+            if (estaPublicado(p)) result.add(p);
+        }
+        return result;
+    }
+
     public List<Produto> getProdutosPorLoja(String lojaId) {
         List<Produto> result = new ArrayList<>();
         for (Produto p : produtos) {
@@ -176,15 +196,18 @@ public class MockDataRepository {
     }
 
     public List<Produto> buscarProdutos(String query, String categoria) {
-        String q = query == null ? "" : query.trim().toLowerCase(Locale.ROOT);
+        String q = com.example.trabalhointerdiciplinar.util.Texto.normalizar(query);
         List<Produto> result = new ArrayList<>();
         for (Produto p : produtos) {
+            if (!estaPublicado(p)) continue;
             boolean matchCat = categoria == null || categoria.equals("Todos")
                     || p.getCategoria().equalsIgnoreCase(categoria);
             boolean matchQ = q.isEmpty()
-                    || p.getTitulo().toLowerCase(Locale.ROOT).contains(q)
-                    || p.getNomeLoja().toLowerCase(Locale.ROOT).contains(q)
-                    || p.getDescricao().toLowerCase(Locale.ROOT).contains(q);
+                    || com.example.trabalhointerdiciplinar.util.Texto.normalizar(p.getTitulo()).contains(q)
+                    || com.example.trabalhointerdiciplinar.util.Texto.normalizar(p.getNomeLoja()).contains(q)
+                    || com.example.trabalhointerdiciplinar.util.Texto.normalizar(p.getCategoria()).contains(q)
+                    || com.example.trabalhointerdiciplinar.util.Texto.normalizar(p.getDescricao()).contains(q)
+                    || com.example.trabalhointerdiciplinar.util.Texto.normalizar(p.getIngredientes()).contains(q);
             if (matchCat && matchQ) result.add(p);
         }
         return result;
@@ -242,6 +265,13 @@ public class MockDataRepository {
         }
         Collections.reverse(result);
         return result;
+    }
+
+    public Pedido getPedidoById(String id) {
+        for (Pedido p : pedidos) {
+            if (p.getId().equals(id)) return p;
+        }
+        return null;
     }
 
     public void addPedido(Pedido pedido) {

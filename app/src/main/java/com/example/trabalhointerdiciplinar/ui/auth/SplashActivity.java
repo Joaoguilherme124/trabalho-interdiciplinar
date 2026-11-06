@@ -1,21 +1,21 @@
 package com.example.trabalhointerdiciplinar.ui.auth;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
+import android.view.View;
+import android.view.ViewTreeObserver;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.airbnb.lottie.LottieAnimationView;
 import com.example.trabalhointerdiciplinar.R;
 
+/**
+ * Abertura de marca. Não há temporizador nem animação: a tela aparece durante o início do
+ * processo e a navegação segue assim que o primeiro quadro é desenhado. Quem já tem sessão é
+ * encaminhado à sua área pelo próprio {@link LoginActivity}, que preserva essa decisão.
+ */
 public class SplashActivity extends AppCompatActivity {
 
-    private static final long FALLBACK_MS = 3500L;
-    private final Handler handler = new Handler(Looper.getMainLooper());
     private boolean navegou;
 
     @Override
@@ -23,35 +23,21 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        LottieAnimationView animation = findViewById(R.id.splash_animation);
-        animation.addAnimatorListener(new AnimatorListenerAdapter() {
+        View raiz = findViewById(android.R.id.content);
+        raiz.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
             @Override
-            public void onAnimationEnd(Animator animator) {
-                irParaLogin();
-            }
-
-            @Override
-            public void onAnimationCancel(Animator animator) {
-                irParaLogin();
+            public boolean onPreDraw() {
+                raiz.getViewTreeObserver().removeOnPreDrawListener(this);
+                raiz.post(SplashActivity.this::seguir);
+                return true;
             }
         });
-
-        handler.postDelayed(this::irParaLogin, FALLBACK_MS);
     }
 
-    private void irParaLogin() {
-        if (navegou || isFinishing()) {
-            return;
-        }
+    private void seguir() {
+        if (navegou || isFinishing()) return;
         navegou = true;
-        handler.removeCallbacksAndMessages(null);
         startActivity(new Intent(this, LoginActivity.class));
         finish();
-    }
-
-    @Override
-    protected void onDestroy() {
-        handler.removeCallbacksAndMessages(null);
-        super.onDestroy();
     }
 }

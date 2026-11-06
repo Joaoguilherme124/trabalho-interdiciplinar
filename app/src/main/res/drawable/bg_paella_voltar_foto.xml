@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Botão "Voltar" sobre fotografia: grafite translúcido para garantir leitura. -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/brand_creme">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#B326282D" />
+            <corners android:radius="@dimen/radius_brand" />
+        </shape>
+    </item>
+</ripple>

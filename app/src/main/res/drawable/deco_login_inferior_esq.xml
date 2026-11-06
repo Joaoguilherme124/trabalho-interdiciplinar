@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Grafismo do canto inferior esquerdo: módulos encaixados em páprica, açafrão, mediterrâneo e vinho. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="160dp"
+    android:height="160dp"
+    android:viewportWidth="160"
+    android:viewportHeight="160">
+    <path
+        android:fillColor="#FF169F9A"
+        android:pathData="M0,80L0,0A80,80 0 0 1 80,80Z" />
+    <path
+        android:fillColor="#FF6A234F"
+        android:pathData="M80,40h40v40h-40z" />
+    <path
+        android:fillColor="#FFE95032"
+        android:pathData="M0,160L0,80A80,80 0 0 1 80,160Z" />
+    <path
+        android:fillColor="#FFF5B82E"
+        android:pathData="M80,80h80v80h-80z" />
+</vector>

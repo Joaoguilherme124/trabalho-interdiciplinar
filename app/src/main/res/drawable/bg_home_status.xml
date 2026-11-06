@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cartão do pedido em andamento: fundo claro e borda açafrão. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFFDF9" />
+    <corners android:radius="14dp" />
+    <stroke
+        android:width="1.5dp"
+        android:color="@color/brand_acafrao" />
+</shape>

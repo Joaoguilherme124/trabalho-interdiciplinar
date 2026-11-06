@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Notificações do sistema -->
+    <string name="notif_canal_nome">Pedidos (demonstração)</string>
+    <string name="notif_canal_desc">Avisos locais sobre o andamento do pedido demonstrativo.</string>
+    <string name="notif_demonstracao">Demonstração</string>
+    <string name="notif_permissao_titulo">Avisos do seu pedido</string>
+    <string name="notif_permissao_texto">Quer receber um aviso quando sua paella mudar de etapa? São notificações locais de demonstração. Você pode recusar: a linha do tempo continua funcionando no aplicativo.</string>
+    <string name="notif_permitir">Permitir</string>
+    <string name="notif_agora_nao">Agora não</string>
+    <string name="notif_desligadas_aviso">As notificações do sistema estão desligadas; os avisos continuam aparecendo aqui no aplicativo.</string>
+
+    <!-- Minha Jornada -->
+    <string name="jornada_titulo">Minha jornada</string>
+    <string name="jornada_numero">Pedido %1$s</string>
+    <string name="jornada_cancelado_titulo">PEDIDO CANCELADO</string>
+    <string name="jornada_cancelado_desc">Este pedido foi cancelado.</string>
+    <string-array name="jornada_card_titulos">
+        <item>SEU PEDIDO FOI REGISTRADO!</item>
+        <item>SUA PAELLA ESTÁ SENDO PREPARADA!</item>
+        <item>SUA PAELLA ESTÁ PRONTA!</item>
+        <item>OBRIGADO POR PARTICIPAR!</item>
+    </string-array>
+    <string-array name="jornada_card_descricoes">
+        <item>Recebemos seu pedido! Ele já faz parte da nossa fila de preparação.</item>
+        <item>Estamos preparando seu pedido. Acompanhe as próximas etapas por aqui.</item>
+        <item>Dirija-se ao ponto de retirada e apresente seu QR Code demonstrativo.</item>
+        <item>Pedido retirado. Obrigado por fazer parte deste encontro.</item>
+    </string-array>
+    <string-array name="jornada_etapa_titulos">
+        <item>Pedido registrado</item>
+        <item>Em preparação</item>
+        <item>Pronto para retirar</item>
+        <item>Pedido retirado</item>
+    </string-array>
+    <string-array name="jornada_etapa_subs">
+        <item>Recebemos seu pedido! Ele já faz parte da nossa fila de preparação.</item>
+        <item>Sua paella está sendo preparada! Nossa equipe está preparando seu pedido.</item>
+        <item>Sua paella está pronta! Dirija-se ao ponto de retirada e apresente seu QR Code demonstrativo.</item>
+        <item>Pedido retirado! Obrigado por fazer parte deste encontro.</item>
+    </string-array>
+    <string name="jornada_linha_tempo">Linha do tempo</string>
+    <string name="jornada_previsao_titulo">Previsão de preparo</string>
+    <plurals name="jornada_previsao_minutos">
+        <item quantity="one">Aproximadamente %d minuto</item>
+        <item quantity="other">Aproximadamente %d minutos</item>
+    </plurals>
+    <string name="jornada_previsao_finalizando">Finalizando preparo</string>
+    <string name="jornada_previsao_pronto">Disponível para retirada!</string>
+    <string name="jornada_previsao_finalizado">Pedido finalizado.</string>
+    <string name="jornada_previsao_nota">Estimativa demonstrativa de preparo. Não é o tempo real de uma cozinha.</string>
+    <string name="jornada_abrir_ingresso">Abrir ingresso digital</string>
+    <string name="jornada_ver_qr_retirada">Ver QR de retirada</string>
+    <string name="cd_etapa_concluida">%1$s, concluída</string>
+    <string name="cd_etapa_atual">%1$s, etapa atual</string>
+    <string name="cd_etapa_futura">%1$s, ainda não iniciada</string>
+    <string name="pedido_de_outra_conta">Este pedido pertence a outra conta.</string>
+
+    <!-- Ingresso digital -->
+    <string name="ingresso_titulo">Meu ingresso digital</string>
+    <string name="ingresso_participante">Participante</string>
+    <string name="ingresso_pedido_itens">%1$s · %2$d produto(s)</string>
+    <string name="ingresso_apresente">APRESENTE SEU QR CODE NA RETIRADA</string>
+    <string name="ingresso_retirado_titulo">PEDIDO RETIRADO</string>
+    <string name="ingresso_retirado_texto">Este ingresso já foi utilizado e não está mais disponível para retirada.</string>
+    <string name="ingresso_simular_retirada">Simular retirada (demonstração)</string>
+    <string name="ingresso_simulada">Retirada simulada. Nenhum QR Code real foi validado.</string>
+    <string name="ingresso_aviso">QR Code demonstrativo: não é comprovante de pagamento nem código de retirada válido.</string>
+    <string name="ingresso_indisponivel">Ingresso indisponível para este pedido.</string>
+    <!-- Central de notificações -->
+    <string name="central_titulo">Notificações</string>
+    <string name="central_vazio_titulo">Você está em dia!</string>
+    <string name="central_vazio_texto">Nenhuma notificação por enquanto.</string>
+    <string name="central_nao_lida_cd">Não lida</string>
+    <string name="home_marca_ingresso">Paella Beneficente</string>
+    <string name="auth_abadeus_curto">ABADEUS</string>
+    <!-- Home contextual e Modo Dia do Evento -->
+    <string name="home_faixa_evento">HOJE É DIA DA PAELLA!</string>
+    <string name="home_subtitulo_evento">Acompanhe seu pedido e aproveite o evento!</string>
+    <string name="home_status_titulo_registrado">SEU PEDIDO FOI REGISTRADO</string>
+    <string name="home_status_titulo_preparo">SEU PEDIDO ESTÁ EM PREPARAÇÃO</string>
+    <string name="home_status_titulo_pronto">SUA PAELLA ESTÁ PRONTA!</string>
+    <string name="home_status_acompanhar">Acompanhar pedido</string>
+    <string name="home_status_ver_qr">Mostrar QR Code</string>
+    <string name="home_status_numero_previsao">Pedido %1$s · %2$s</string>
+    <string name="home_atalho_jornada">Minha jornada</string>
+    <string name="home_atalho_mapa">Mapa do evento</string>
+    <string name="home_atalho_programacao">Programação</string>
+</resources>

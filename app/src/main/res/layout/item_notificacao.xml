@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Item da central de notificações: ícone da etapa, título, mensagem, tempo e estado de leitura. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/notif_raiz"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/bg_home_card"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:gravity="top"
+    android:minHeight="@dimen/touch_target"
+    android:orientation="horizontal"
+    android:padding="14dp">
+
+    <FrameLayout
+        android:id="@+id/notif_icone_caixa"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:background="@drawable/bg_home_icone_acafrao">
+
+        <ImageView
+            android:id="@+id/notif_icone"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:importantForAccessibility="no"
+            app:tint="@color/brand_vinho" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/notif_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_variable"
+            android:textColor="@color/brand_vinho"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/notif_mensagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/inter_variable"
+            android:textColor="@color/brand_grafite"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/notif_tempo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/inter_variable"
+            android:textColor="@color/brand_grafite_muted"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/notif_ponto"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/bg_home_ponto"
+        android:contentDescription="@string/central_nao_lida_cd" />
+</LinearLayout>

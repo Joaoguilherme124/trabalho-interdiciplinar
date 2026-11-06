@@ -1,39 +1,350 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_produto_form"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_app">
+    android:background="@color/brand_creme"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <include
+        android:id="@+id/include_demo"
+        layout="@layout/view_demo_banner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_height="wrap_content" />
 
-        <TextView
-            android:id="@+id/txt_titulo_tela"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/novo_produto"
-            android:textColor="@color/text_dark"
-            android:textSize="22sp"
-            android:textStyle="bold" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
 
-        <EditText android:id="@+id/edt_titulo" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="16dp" android:background="@drawable/bg_input" android:hint="Título" android:paddingHorizontal="14dp" />
-        <EditText android:id="@+id/edt_preco" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="10dp" android:background="@drawable/bg_input" android:hint="Preço" android:inputType="numberDecimal" android:paddingHorizontal="14dp" />
-        <EditText android:id="@+id/edt_estoque" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="10dp" android:background="@drawable/bg_input" android:hint="Estoque" android:inputType="number" android:paddingHorizontal="14dp" />
-        <Spinner android:id="@+id/spinner_categoria" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="10dp" android:background="@drawable/bg_input" android:paddingHorizontal="8dp" />
-        <EditText android:id="@+id/edt_descricao" android:layout_width="match_parent" android:layout_height="100dp" android:layout_marginTop="10dp" android:background="@drawable/bg_input" android:gravity="top" android:hint="Descrição" android:padding="14dp" />
-
-        <TextView
-            android:id="@+id/btn_salvar"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/bg_btn_primary"
-            android:gravity="center"
-            android:text="@string/salvar"
-            android:textColor="@color/text_dark"
-            android:textStyle="bold" />
-    </LinearLayout>
-</ScrollView>
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/space_md">
+
+            <TextView
+                android:id="@+id/btn_voltar"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/touch_target"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_back"
+                android:drawablePadding="6dp"
+                android:drawableTint="@color/brand_vinho"
+                android:focusable="true"
+                android:fontFamily="@font/inter_variable"
+                android:gravity="center_vertical"
+                android:text="@string/detalhe_voltar"
+                android:textColor="@color/brand_vinho"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_titulo_tela"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:accessibilityHeading="true"
+                android:fontFamily="@font/barlow_condensed_bold"
+                android:includeFontPadding="false"
+                android:text="@string/produto_form_novo"
+                android:textAllCaps="true"
+                android:textColor="@color/brand_vinho"
+                android:textSize="34sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/inter_variable"
+                android:labelFor="@id/edt_titulo"
+                android:text="@string/produto_campo_nome"
+                android:textColor="@color/brand_vinho"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_titulo"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_campo_marca"
+                android:fontFamily="@font/inter_variable"
+                android:importantForAutofill="no"
+                android:minHeight="48dp"
+                android:paddingHorizontal="14dp"
+                android:textColor="@color/brand_grafite"
+                android:textSize="15sp"
+                android:inputType="textCapSentences" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/inter_variable"
+                android:labelFor="@id/edt_descricao"
+                android:text="@string/produto_campo_descricao"
+                android:textColor="@color/brand_vinho"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_descricao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_campo_marca"
+                android:fontFamily="@font/inter_variable"
+                android:importantForAutofill="no"
+                android:minHeight="48dp"
+                android:paddingHorizontal="14dp"
+                android:textColor="@color/brand_grafite"
+                android:textSize="15sp"
+                android:gravity="top" android:inputType="textMultiLine|textCapSentences" android:minLines="3" android:paddingVertical="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/inter_variable"
+                android:labelFor="@id/spinner_categoria"
+                android:text="@string/produto_campo_categoria"
+                android:textColor="@color/brand_vinho"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner_categoria"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_campo_marca"
+                android:paddingHorizontal="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/inter_variable"
+                android:labelFor="@id/edt_preco"
+                android:text="@string/produto_campo_preco"
+                android:textColor="@color/brand_vinho"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_preco"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_campo_marca"
+                android:fontFamily="@font/inter_variable"
+                android:importantForAutofill="no"
+                android:minHeight="48dp"
+                android:paddingHorizontal="14dp"
+                android:textColor="@color/brand_grafite"
+                android:textSize="15sp"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/inter_variable"
+                android:labelFor="@id/spinner_imagem"
+                android:text="@string/produto_campo_imagem"
+                android:textColor="@color/brand_vinho"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    app:cardBackgroundColor="@color/brand_grafite"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="0dp">
+
+                    <ImageView
+                        android:id="@+id/img_preview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:importantForAccessibility="no"
+                        android:scaleType="centerCrop" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <Spinner
+                    android:id="@+id/spinner_imagem"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_campo_marca"
+                    android:paddingHorizontal="8dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/inter_variable"
+                android:labelFor="@id/edt_ingredientes"
+                android:text="@string/produto_campo_ingredientes"
+                android:textColor="@color/brand_vinho"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_ingredientes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_campo_marca"
+                android:fontFamily="@font/inter_variable"
+                android:importantForAutofill="no"
+                android:minHeight="48dp"
+                android:paddingHorizontal="14dp"
+                android:textColor="@color/brand_grafite"
+                android:textSize="15sp"
+                android:gravity="top" android:inputType="textMultiLine|textCapSentences" android:minLines="2" android:paddingVertical="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/inter_variable"
+                android:labelFor="@id/edt_porcao"
+                android:text="@string/produto_campo_porcao"
+                android:textColor="@color/brand_vinho"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_porcao"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_campo_marca"
+                android:fontFamily="@font/inter_variable"
+                android:importantForAutofill="no"
+                android:minHeight="48dp"
+                android:paddingHorizontal="14dp"
+                android:textColor="@color/brand_grafite"
+                android:textSize="15sp"
+                android:inputType="textCapSentences" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/inter_variable"
+                android:labelFor="@id/edt_tempo"
+                android:text="@string/produto_campo_tempo"
+                android:textColor="@color/brand_vinho"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_tempo"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_campo_marca"
+                android:fontFamily="@font/inter_variable"
+                android:importantForAutofill="no"
+                android:minHeight="48dp"
+                android:paddingHorizontal="14dp"
+                android:textColor="@color/brand_grafite"
+                android:textSize="15sp"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/inter_variable"
+                android:labelFor="@id/edt_estoque"
+                android:text="@string/produto_campo_estoque"
+                android:textColor="@color/brand_vinho"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_estoque"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_campo_marca"
+                android:fontFamily="@font/inter_variable"
+                android:importantForAutofill="no"
+                android:minHeight="48dp"
+                android:paddingHorizontal="14dp"
+                android:textColor="@color/brand_grafite"
+                android:textSize="15sp"
+                android:inputType="number" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_home_card"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/touch_target"
+                android:orientation="horizontal"
+                android:padding="14dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_variable"
+                        android:text="@string/produto_campo_disponivel"
+                        android:textColor="@color/brand_vinho"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_variable"
+                        android:text="@string/produto_campo_disponivel_desc"
+                        android:textColor="@color/brand_grafite_muted"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switch_disponivel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:checked="true"
+                    android:contentDescription="@string/produto_campo_disponivel" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_salvar"
+                style="@style/Widget.Paella.Button.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md"
+                android:fontFamily="@font/inter_variable"
+                android:minHeight="56dp"
+                android:text="@string/produto_salvar"
+                android:textColor="@color/brand_vinho" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

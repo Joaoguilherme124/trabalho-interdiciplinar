@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Splash de marca: logotipo oficial (proporção original) sobre creme. -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_app">
+    android:background="@color/brand_creme"
+    android:padding="@dimen/space_lg">
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/splash_animation"
+    <ImageView
         android:layout_width="280dp"
-        android:layout_height="280dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="false"
-        app:lottie_rawRes="@raw/splash_fork_knife" />
-
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/logo_cd"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo_paella_beneficente" />
 </FrameLayout>

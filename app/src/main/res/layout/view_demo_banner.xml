@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Aviso de ambiente de demonstração. Visível apenas quando DemoCatalog.AMBIENTE_DEMO é true. -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/banner_demo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_paella_demo"
+    android:fontFamily="@font/inter_variable"
+    android:gravity="center"
+    android:paddingHorizontal="12dp"
+    android:paddingVertical="6dp"
+    android:text="@string/demo_aviso"
+    android:textColor="@color/brand_acafrao"
+    android:textSize="11sp"
+    android:textStyle="bold" />

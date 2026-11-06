@@ -4,7 +4,7 @@
     android:id="@+id/root_merchant"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_app">
+    android:background="@color/brand_creme">
 
     <FrameLayout
         android:id="@+id/fragment_container"
@@ -20,11 +20,13 @@
         style="@style/Widget.App.BottomNav"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/nav_dark"
-        app:itemIconTint="@color/bottom_nav_color"
+        android:background="@drawable/bg_nav_arredondada"
+        android:clipToOutline="true"
+        app:backgroundTint="@null"
+        app:itemIconTint="@color/bottom_nav_buyer_color"
         app:itemTextAppearanceActive="@style/TextAppearance.App.BottomNav"
         app:itemTextAppearanceInactive="@style/TextAppearance.App.BottomNav"
-        app:itemTextColor="@color/bottom_nav_color"
+        app:itemTextColor="@color/bottom_nav_buyer_color"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

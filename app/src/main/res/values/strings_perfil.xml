@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="perfil_marca">Paella Beneficente</string>
+    <string name="perfil_titulo">Meu perfil</string>
+    <string name="perfil_descricao">Seu espaço para acompanhar sua participação.</string>
+    <string name="perfil_participante">Participante</string>
+
+    <string name="perfil_secao_conta">Minha conta</string>
+    <string name="perfil_secao_evento">Evento</string>
+
+    <string name="perfil_pedidos_titulo">Meus pedidos</string>
+    <string name="perfil_pedidos_desc">Consulte suas compras e acompanhe seus pedidos.</string>
+    <string name="perfil_dados_titulo">Meus dados</string>
+    <string name="perfil_dados_desc">Visualize e atualize suas informações.</string>
+    <string name="perfil_evento_titulo">Sobre o evento</string>
+    <string name="perfil_evento_desc">Conheça a Paella Beneficente.</string>
+    <string name="perfil_abadeus_titulo">Sobre a ABADEUS</string>
+    <string name="perfil_abadeus_desc">Saiba mais sobre o propósito da iniciativa.</string>
+    <string name="perfil_ajuda_titulo">Ajuda e dúvidas</string>
+    <string name="perfil_ajuda_desc">Encontre orientações sobre o aplicativo.</string>
+    <string name="perfil_em_breve">Em breve</string>
+    <string name="perfil_em_breve_toast">Disponível em uma próxima etapa.</string>
+
+    <string name="perfil_sair_titulo">Sair da conta</string>
+    <string name="perfil_sair_confirmar_titulo">Sair da conta?</string>
+    <string name="perfil_sair_confirmar_texto">Você precisará entrar novamente e o carrinho será esvaziado.</string>
+    <string name="perfil_cancelar">Cancelar</string>
+
+    <string name="perfil_rodape_nome">Paella Beneficente</string>
+    <string name="perfil_rodape_iniciativa">Uma iniciativa de ABADEUS</string>
+    <string name="perfil_rodape_versao">Versão %1$s</string>
+
+    <string name="editar_titulo">Meus dados</string>
+    <string name="editar_nome">Nome completo</string>
+    <string name="editar_email">E-mail</string>
+    <string name="editar_telefone">Telefone</string>
+    <string name="editar_endereco">Endereço</string>
+    <string name="editar_salvar">Salvar alterações</string>
+    <string name="editar_demo_aviso">Os dados ficam apenas neste aparelho (demonstração).</string>
+    <string name="editar_sucesso">Dados atualizados.</string>
+    <string name="editar_erro_nome">Informe seu nome.</string>
+    <string name="editar_erro_email">Informe um e-mail válido.</string>
+    <string name="editar_erro_email_uso">Este e-mail já está em uso.</string>
+    <string name="cd_avatar">Avatar com as iniciais %1$s</string>
+</resources>

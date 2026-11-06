@@ -1,81 +1,500 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_app"
+    android:background="@color/brand_creme"
     android:fillViewport="true">
 
     <LinearLayout
+        android:id="@+id/home_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:paddingBottom="20dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Vitrine"
-            android:textColor="@color/leaf"
-            android:textSize="28sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Marketplace multi-lojas"
-            android:textColor="@color/text_muted"
-            android:textSize="13sp" />
-
-        <EditText
-            android:id="@+id/edt_busca"
+        <!-- 1. Topo: cabeçalho, acompanhamento do pedido e saudação -->
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="14dp"
-            android:background="@drawable/bg_input"
-            android:drawableStart="@drawable/ic_search"
-            android:drawablePadding="10dp"
-            android:hint="@string/buscar_hint"
-            android:imeOptions="actionSearch"
-            android:inputType="text"
-            android:paddingHorizontal="14dp" />
+            android:layout_height="wrap_content">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_categorias"
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="167dp"
+                android:layout_gravity="top|end"
+                android:importantForAccessibility="no"
+                android:scaleType="fitXY"
+                android:src="@drawable/deco_login_superior" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|start"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="96dp"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/logo_cd"
+                        android:maxWidth="200dp"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/logo_paella_beneficente" />
+
+                    <FrameLayout
+                        android:id="@+id/btn_notificacoes"
+                        android:layout_width="46dp"
+                        android:layout_height="46dp"
+                        android:layout_gravity="top|end"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/bg_home_sino"
+                        android:clickable="true"
+                        android:contentDescription="@string/home_sino_cd"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:importantForAccessibility="no"
+                            android:src="@drawable/ic_home_sino"
+                            app:tint="@color/brand_vinho" />
+
+                        <View
+                            android:id="@+id/ponto_notificacao"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_gravity="top|end"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="@drawable/bg_home_ponto"
+                            android:importantForAccessibility="no"
+                            android:visibility="gone" />
+                    </FrameLayout>
+                </FrameLayout>
+
+                <!-- Acompanhamento do pedido (só com pedido ativo) -->
+                <com.example.trabalhointerdiciplinar.ui.buyer.AcompanhamentoPedidoView
+                    android:id="@+id/acompanhamento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="16dp">
+
+                    <TextView
+                        android:id="@+id/txt_saudacao"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/barlow_condensed_bold"
+                        android:includeFontPadding="false"
+                        android:text="@string/home_saudacao_anonima"
+                        android:textColor="@color/brand_vinho"
+                        android:textSize="36sp" />
+
+                    <TextView
+                        android:id="@+id/txt_subtitulo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/inter_variable"
+                        android:text="@string/home_subtitulo"
+                        android:textColor="#B326282D"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="45dp"
+                        android:layout_height="3dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/brand_acafrao"
+                        android:importantForAccessibility="no" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- Modo Dia do Evento: faixa de destaque -->
+        <LinearLayout
+            android:id="@+id/faixa_evento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
             android:layout_marginTop="12dp"
-            android:orientation="horizontal" />
+            android:background="@drawable/bg_faixa_evento"
+            android:gravity="center_vertical"
+            android:minHeight="48dp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="8dp"
+            android:visibility="gone">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
-            android:text="@string/lojas_destaque"
-            android:textColor="@color/text_dark"
-            android:textSize="17sp"
-            android:textStyle="bold" />
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_calendar"
+                app:tint="@color/brand_creme" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_lojas"
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/barlow_condensed_bold"
+                android:includeFontPadding="false"
+                android:text="@string/home_faixa_evento"
+                android:textColor="@color/brand_creme"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <!-- 2. Banner do evento: painel vinho em diagonal sobre a fotografia -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/banner_evento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal" />
+            android:minHeight="190dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/brand_vinho"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="0dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
-            android:text="@string/produtos"
-            android:textColor="@color/text_dark"
-            android:textSize="17sp"
-            android:textStyle="bold" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="190dp">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_produtos"
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guia_foto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.40" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guia_texto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.52" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:contentDescription="@string/home_banner_desc"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/paella_hero"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guia_foto"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:importantForAccessibility="no"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/home_banner_vinho"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:orientation="vertical"
+                    android:paddingVertical="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/guia_texto"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:importantForAccessibility="no"
+                            android:src="@drawable/ic_calendar"
+                            app:tint="@color/brand_creme" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:fontFamily="@font/inter_variable"
+                            android:letterSpacing="0.06"
+                            android:text="@string/home_banner_dia"
+                            android:textAllCaps="true"
+                            android:textColor="@color/brand_creme"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt_banner_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/barlow_condensed_bold"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/brand_creme"
+                        android:textSize="35sp" />
+
+                    <View
+                        android:layout_width="36dp"
+                        android:layout_height="3dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/brand_acafrao"
+                        android:importantForAccessibility="no" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/barlow_condensed_bold"
+                        android:includeFontPadding="false"
+                        android:text="@string/home_banner_chamada_dupla"
+                        android:textAllCaps="true"
+                        android:textColor="@color/brand_creme"
+                        android:textSize="22sp" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 4. Atalhos rápidos (preenchidos por código) -->
+        <LinearLayout
+            android:id="@+id/atalhos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:nestedScrollingEnabled="false" />
+            android:baselineAligned="false"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp" />
+
+        <!-- 5. Informações essenciais: três colunas -->
+        <LinearLayout
+            android:id="@+id/card_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_home_card"
+            android:orientation="horizontal"
+            android:padding="14dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_calendar"
+                    app:tint="@color/brand_vinho" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="@string/home_info_data_rotulo"
+                    android:textColor="@color/brand_grafite_muted"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/barlow_condensed_bold"
+                    android:text="@string/home_info_data_valor"
+                    android:textColor="@color/brand_vinho"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:background="#406A234F"
+                android:importantForAccessibility="no" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_home_relogio"
+                    app:tint="@color/brand_vinho" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="@string/home_info_horario_rotulo"
+                    android:textColor="@color/brand_grafite_muted"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/barlow_condensed_bold"
+                    android:text="@string/home_info_horario_valor"
+                    android:textColor="@color/brand_vinho"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:background="#406A234F"
+                android:importantForAccessibility="no" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_location"
+                    app:tint="@color/brand_vinho" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:text="@string/home_info_local_rotulo"
+                    android:textColor="@color/brand_grafite_muted"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/barlow_condensed_bold"
+                    android:text="@string/home_info_local_valor"
+                    android:textColor="@color/brand_vinho"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 6. Propósito social -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_home_proposito"
+            android:clipToOutline="true">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="140dp"
+                android:layout_gravity="top|end"
+                android:importantForAccessibility="no"
+                android:scaleType="fitEnd"
+                android:src="@drawable/deco_home_proposito" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="18dp"
+                android:paddingEnd="100dp"
+                android:paddingStart="18dp"
+                android:paddingTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:background="@color/brand_paprica"
+                        android:importantForAccessibility="no" />
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginStart="4dp"
+                        android:background="@color/brand_acafrao"
+                        android:importantForAccessibility="no" />
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginStart="4dp"
+                        android:background="@color/brand_mediterraneo"
+                        android:importantForAccessibility="no" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/barlow_condensed_bold"
+                    android:includeFontPadding="false"
+                    android:text="@string/home_proposito_l1"
+                    android:textAllCaps="true"
+                    android:textColor="@color/brand_creme"
+                    android:textSize="29sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/barlow_condensed_bold"
+                    android:includeFontPadding="false"
+                    android:text="@string/home_proposito_l2"
+                    android:textAllCaps="true"
+                    android:textColor="@color/brand_acafrao"
+                    android:textSize="29sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/inter_variable"
+                    android:lineSpacingExtra="3sp"
+                    android:text="@string/home_proposito_texto"
+                    android:textColor="@color/brand_creme"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </FrameLayout>
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

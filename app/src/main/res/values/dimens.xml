@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="space_xs">8dp</dimen>
+    <dimen name="space_sm">12dp</dimen>
+    <dimen name="space_md">16dp</dimen>
+    <dimen name="space_lg">24dp</dimen>
+    <dimen name="radius_brand">8dp</dimen>
+    <dimen name="touch_target">48dp</dimen>
+    <dimen name="hero_height">200dp</dimen>
+    <!-- Login: folga à direita do logotipo para não tocar o grafismo (telas estreitas precisam de mais). -->
+    <dimen name="login_logo_margem_dir">150dp</dimen>
+</resources>

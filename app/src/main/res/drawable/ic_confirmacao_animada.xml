@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Selo de confirmação: círculo açafrão, check vinho e dois fragmentos geométricos. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="72dp"
+    android:height="72dp"
+    android:viewportWidth="72"
+    android:viewportHeight="72">
+    <group
+        android:name="g_circulo"
+        android:pivotX="36"
+        android:pivotY="36">
+        <path
+            android:fillColor="#FFF5B82E"
+            android:pathData="M36,6A30,30 0 1 1 35.99,6z" />
+    </group>
+    <path
+        android:name="p_check"
+        android:pathData="M22,37L32,47L51,26"
+        android:strokeColor="#FF6A234F"
+        android:strokeLineCap="square"
+        android:strokeLineJoin="miter"
+        android:strokeWidth="5" />
+    <group
+        android:name="g_fragmento_a"
+        android:pivotX="62"
+        android:pivotY="12">
+        <path
+            android:fillColor="#FFE95032"
+            android:pathData="M58,8h8v8h-8z" />
+    </group>
+    <group
+        android:name="g_fragmento_b"
+        android:pivotX="9"
+        android:pivotY="16">
+        <path
+            android:fillColor="#FF169F9A"
+            android:pathData="M9,10L15,16L9,22L3,16z" />
+    </group>
+</vector>

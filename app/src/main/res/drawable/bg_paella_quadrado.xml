@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Quadrado vinho dos números dos passos (grafismo geométrico). -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/brand_vinho" />
+    <corners android:radius="@dimen/radius_brand" />
+</shape>

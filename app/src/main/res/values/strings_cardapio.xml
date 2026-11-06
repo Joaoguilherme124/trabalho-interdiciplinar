@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cardapio_apoio">Escolha seus produtos favoritos.</string>
+    <string name="cardapio_adicionado">Adicionado</string>
+    <string name="barra_ver_pedido">Ver pedido</string>
+    <string name="barra_total_rotulo">Total do pedido</string>
+    <string name="barra_cd">Pedido com %1$d itens, total de %2$s. Abrir revisão do pedido.</string>
+    <string name="cd_qtd_produto">Quantidade de %1$s</string>
+    <plurals name="barra_itens_selecionados">
+        <item quantity="one">%d item selecionado</item>
+        <item quantity="other">%d itens selecionados</item>
+    </plurals>
+    <string name="carrinho_titulo_pedido">Seu pedido</string>
+    <string name="barra_mais">+%1$d</string>
+    <string name="busca_hint">Buscar no cardápio...</string>
+    <string name="busca_limpar_cd">Limpar busca</string>
+    <string name="busca_vazio_titulo">Nenhum produto encontrado</string>
+    <string name="busca_vazio_texto">Tente buscar por outro nome ou categoria.</string>
+    <string name="busca_limpar">Limpar busca</string>
+    <string name="favoritos_filtro_cd">Mostrar somente favoritos</string>
+    <string name="favoritos_filtro_ativo_cd">Mostrar todos os produtos</string>
+    <string name="favoritos_vazio_titulo">Seus favoritos aparecerão aqui.</string>
+    <string name="favoritos_vazio_texto">Toque no coração dos produtos que mais gostar.</string>
+    <string name="favoritos_ver_todos">Ver cardápio completo</string>
+    <string name="cd_favoritar">Adicionar %1$s aos favoritos</string>
+    <string name="cd_desfavoritar">Remover %1$s dos favoritos</string>
+    <string name="adicionado_ao_pedido">Adicionado ao pedido!</string>
+    <string name="desfazer">Desfazer</string>
+    <string name="desfeito">Alteração desfeita.</string>
+</resources>

@@ -2,52 +2,152 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_app"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:background="@color/brand_creme"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include_demo"
+        layout="@layout/view_demo_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/btn_voltar_carrinho"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/touch_target"
+        android:layout_marginStart="@dimen/space_xs"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:drawableStart="@drawable/ic_back"
+        android:drawablePadding="6dp"
+        android:drawableTint="@color/brand_vinho"
+        android:focusable="true"
+        android:fontFamily="@font/inter_variable"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/space_xs"
+        android:text="@string/detalhe_voltar"
+        android:textColor="@color/brand_vinho"
+        android:textSize="15sp"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/space_md"
+        android:layout_marginTop="0dp"
+        android:fontFamily="@font/barlow_condensed_bold"
         android:text="@string/nav_carrinho"
-        android:textColor="@color/text_dark"
-        android:textSize="22sp"
-        android:textStyle="bold" />
+        android:textAllCaps="true"
+        android:textColor="@color/brand_vinho"
+        android:textSize="32sp" />
 
-    <TextView
-        android:id="@+id/txt_vazio"
+    <LinearLayout
+        android:id="@+id/estado_vazio_carrinho"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:gravity="center"
-        android:text="Seu carrinho está vazio"
-        android:textColor="@color/text_muted"
-        android:visibility="gone" />
+        android:layout_marginHorizontal="@dimen/space_md"
+        android:layout_marginTop="@dimen/space_lg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="28dp"
+                android:layout_height="10dp"
+                android:background="@color/brand_paprica"
+                android:importantForAccessibility="no" />
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="4dp"
+                android:background="@color/brand_mediterraneo"
+                android:importantForAccessibility="no" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/barlow_condensed_bold"
+            android:gravity="center"
+            android:text="@string/carrinho_vazio_titulo"
+            android:textAllCaps="true"
+            android:textColor="@color/brand_vinho"
+            android:textSize="28sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_variable"
+            android:gravity="center"
+            android:text="@string/carrinho_vazio_texto"
+            android:textColor="@color/brand_grafite_muted"
+            android:textSize="14sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_carrinho_ver_cardapio"
+            style="@style/Widget.Paella.Button.Primary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/inter_variable"
+            android:text="@string/carrinho_vazio_acao" />
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_carrinho"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="12dp"
-        android:layout_weight="1" />
+        android:layout_marginTop="@dimen/space_sm"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingHorizontal="@dimen/space_md" />
 
-    <TextView
-        android:id="@+id/txt_total"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:textColor="@color/text_dark"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/space_md">
 
-    <TextView
-        android:id="@+id/btn_checkout"
-        android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/bg_btn_primary"
-        android:gravity="center"
-        android:text="@string/finalizar_compra"
-        android:textColor="@color/text_dark"
-        android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/barlow_condensed_bold"
+                android:text="@string/carrinho_total"
+                android:textAllCaps="true"
+                android:textColor="@color/brand_grafite"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/txt_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/barlow_condensed_bold"
+                android:textColor="@color/brand_vinho"
+                android:textSize="28sp" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_checkout"
+            style="@style/Widget.Paella.Button.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xs"
+            android:fontFamily="@font/inter_variable"
+            android:text="@string/finalizar_compra" />
+    </LinearLayout>
 </LinearLayout>

@@ -11,6 +11,21 @@ import java.util.Map;
 public class CarrinhoManager {
     private static CarrinhoManager instance;
     private final List<ItemCarrinho> itens = new ArrayList<>();
+    private Alteracao ultima;
+    private long contador;
+
+    /** Última alteração feita no carrinho, guardada para permitir "Desfazer". */
+    private static final class Alteracao {
+        final Produto produto;
+        final int quantidadeAntes;
+        final long id;
+
+        Alteracao(Produto produto, int quantidadeAntes, long id) {
+            this.produto = produto;
+            this.quantidadeAntes = quantidadeAntes;
+            this.id = id;
+        }
+    }
 
     private CarrinhoManager() {
     }
@@ -27,6 +42,7 @@ public class CarrinhoManager {
     }
 
     public void adicionar(Produto produto, int quantidade) {
+        ultima = new Alteracao(produto, getQuantidade(produto.getId()), ++contador);
         for (ItemCarrinho item : itens) {
             if (item.getProduto().getId().equals(produto.getId())) {
                 item.setQuantidade(item.getQuantidade() + quantidade);
@@ -39,6 +55,7 @@ public class CarrinhoManager {
     public void atualizarQuantidade(String produtoId, int quantidade) {
         for (int i = 0; i < itens.size(); i++) {
             if (itens.get(i).getProduto().getId().equals(produtoId)) {
+                ultima = new Alteracao(itens.get(i).getProduto(), itens.get(i).getQuantidade(), ++contador);
                 if (quantidade <= 0) {
                     itens.remove(i);
                 } else {
@@ -55,6 +72,38 @@ public class CarrinhoManager {
 
     public void limpar() {
         itens.clear();
+        ultima = null;
+    }
+
+    /** Identificador da última alteração desfazível (0 = nenhuma). */
+    public synchronized long ultimaAlteracaoId() {
+        return ultima == null ? 0 : ultima.id;
+    }
+
+    /**
+     * Desfaz a alteração {@code id}, só se ela ainda for a mais recente: uma ação antiga nunca
+     * sobrescreve mudanças posteriores. Devolve se algo foi desfeito.
+     */
+    public synchronized boolean desfazer(long id) {
+        if (ultima == null || ultima.id != id) return false;
+        Alteracao a = ultima;
+        ultima = null;
+        for (int i = 0; i < itens.size(); i++) {
+            if (itens.get(i).getProduto().getId().equals(a.produto.getId())) {
+                if (a.quantidadeAntes <= 0) itens.remove(i);
+                else itens.get(i).setQuantidade(a.quantidadeAntes);
+                return true;
+            }
+        }
+        if (a.quantidadeAntes > 0) itens.add(new ItemCarrinho(a.produto, a.quantidadeAntes));
+        return true;
+    }
+
+    public int getQuantidade(String produtoId) {
+        for (ItemCarrinho item : itens) {
+            if (item.getProduto().getId().equals(produtoId)) return item.getQuantidade();
+        }
+        return 0;
     }
 
     public int getTotalItens() {

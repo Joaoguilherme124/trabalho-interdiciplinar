@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Indicador geométrico: três formas da marca em linha (repouso). Anima via avd_loading_geometrico. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <group android:name="g_barra">
+        <path
+            android:fillColor="#FFE95032"
+            android:pathData="M3,28h10v8h-10z" />
+    </group>
+    <group android:name="g_losango">
+        <path
+            android:fillColor="#FFF5B82E"
+            android:pathData="M24,20L32,28L24,36L16,28z" />
+    </group>
+    <group android:name="g_quadrado">
+        <path
+            android:fillColor="#FF6A234F"
+            android:pathData="M35,28h10v8h-10z" />
+    </group>
+</vector>

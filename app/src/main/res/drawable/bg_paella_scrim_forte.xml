@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Degradê do hero: denso a partir do meio, onde ficam os textos. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:angle="270"
+        android:centerColor="#B326282D"
+        android:centerY="0.4"
+        android:endColor="#F226282D"
+        android:startColor="#3326282D" />
+</shape>

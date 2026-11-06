@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="painel_titulo">Painel de simulação</string>
+    <string name="painel_aviso">Ferramenta de demonstração. Age apenas sobre pedidos da conta conectada; nada é real.</string>
+    <string name="painel_sem_pedido">Você não tem pedido em andamento para simular. Faça um pedido pelo cardápio.</string>
+    <string name="painel_pedido_atual">Pedido %1$s · %2$s</string>
+    <string name="painel_reiniciar">Reiniciar demonstração</string>
+    <string name="painel_avancar_preparo">Avançar para Em preparação</string>
+    <string name="painel_avancar_pronto">Avançar para Pronto para retirar</string>
+    <string name="painel_simular_retirada">Simular retirada</string>
+    <string name="painel_modo_evento">Modo Dia do Evento</string>
+    <string name="painel_modo_evento_desc">Ativa a faixa e os atalhos do dia da paella, sem alterar a data do aparelho.</string>
+    <string name="painel_nota_cronograma">Depois de adiantar uma etapa, o cronograma automático segue a partir dela.</string>
+    <string name="painel_feito">Feito.</string>
+    <string name="painel_indisponivel">Ação indisponível neste estado.</string>
+</resources>

@@ -2,8 +2,8 @@
 <resources>
     <string name="app_name">Vitrine</string>
 
-    <string name="nav_home">Home</string>
-    <string name="nav_categorias">Categorias</string>
+    <string name="nav_home">Início</string>
+    <string name="nav_categorias">Cardápio</string>
     <string name="nav_carrinho">Carrinho</string>
     <string name="nav_pedidos">Pedidos</string>
     <string name="nav_perfil">Perfil</string>
@@ -43,11 +43,31 @@
     <string name="aprovar">Aprovar</string>
     <string name="rejeitar">Rejeitar</string>
 
-    <string-array name="tipos_usuario">
-        <item>COMPRADOR</item>
-        <item>LOJISTA</item>
-        <item>ADMIN</item>
-    </string-array>
+    <!-- Início (Paella Beneficente ABADEUS) -->
+    <string name="home_saudacao_anonima">Olá! Seja bem-vindo.</string>
+    <string name="home_saudacao">Olá, %1$s</string>
+    <string name="home_banner_desc">Paella servida em panela de ferro com camarões, mexilhões e limão</string>
+    <string name="home_proposito_texto">Um encontro para compartilhar sabores, aproximar pessoas e fazer da solidariedade parte da experiência.</string>
+
+    <!-- Cardápio / carrinho (dados de demonstração) -->
+    <string name="cardapio_titulo">Cardápio</string>
+    <string name="demo_aviso">AMBIENTE DE DEMONSTRAÇÃO · preços, pedidos e pagamentos fictícios</string>
+    <string name="cardapio_vazio">Nenhum item nesta categoria.</string>
+    <string name="carrinho_barra_ver">Ver carrinho</string>
+    <string name="carrinho_barra_resumo">%1$d item(ns) · %2$s</string>
+    <string name="carrinho_vazio">Seu carrinho está vazio. Escolha algo no cardápio.</string>
+    <string name="carrinho_vazio_titulo">Seu pedido começa por aqui.</string>
+    <string name="carrinho_vazio_texto">Escolha uma paella para começar.</string>
+    <string name="carrinho_vazio_acao">Ver cardápio</string>
+    <string name="carrinho_total">Total</string>
+    <string name="detalhe_adicionar">Adicionar · %1$s</string>
+    <string name="detalhe_voltar">Voltar</string>
+    <string name="detalhe_adicionado">Adicionado ao carrinho</string>
+    <string name="cd_adicionar">Adicionar %1$s ao carrinho</string>
+    <string name="cd_diminuir">Diminuir quantidade</string>
+    <string name="cd_aumentar">Aumentar quantidade</string>
+    <string name="cd_remover">Remover do carrinho</string>
+    <string name="checkout_demo_confirmado">Pedido de demonstração registrado. Nenhuma cobrança foi feita.</string>
 
     <string-array name="formas_pagamento">
         <item>PIX</item>
@@ -57,11 +77,8 @@
 
     <string-array name="categorias">
         <item>Todos</item>
-        <item>Eletrônicos</item>
-        <item>Moda</item>
-        <item>Alimentos</item>
-        <item>Casa</item>
-        <item>Beleza</item>
-        <item>Esportes</item>
+        <item>Paellas</item>
+        <item>Combos</item>
+        <item>Bebidas</item>
     </string-array>
 </resources>

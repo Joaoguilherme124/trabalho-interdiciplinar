@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Faixa de marca das telas de entrada: logotipo oficial (proporção original) sobre creme. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/auth_header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/brand_creme"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/space_lg"
+    android:paddingVertical="@dimen/space_md">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="88dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/logo_cd"
+        android:scaleType="fitStart"
+        android:src="@drawable/logo_paella_beneficente" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/space_sm"
+        android:background="@color/line" />
+</LinearLayout>

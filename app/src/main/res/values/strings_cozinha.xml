@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_cozinha">Cozinha</string>
+    <string name="nav_fila">Pedidos</string>
+    <string name="nav_minha_loja">Minha loja</string>
+
+    <!-- Central da Cozinha -->
+    <string name="cozinha_titulo">Central da cozinha</string>
+    <string name="cozinha_sem_loja">Nenhuma loja cadastrada ainda</string>
+    <string name="cozinha_cadastrar_loja">Cadastrar loja</string>
+    <string name="cozinha_modo_titulo">Preparo pela cozinha</string>
+    <string name="cozinha_modo_desc">Ligado: os pedidos novos esperam por você. Desligado: o cronograma demonstrativo avança sozinho.</string>
+    <string name="cozinha_ind_novos">Novos</string>
+    <string name="cozinha_ind_preparo">Em preparação</string>
+    <string name="cozinha_ind_prontos">Prontos</string>
+    <string name="cozinha_ind_finalizados">Finalizados</string>
+    <string name="cozinha_proximos">Próximos pedidos</string>
+    <string name="cozinha_proximos_vazio">Nenhum pedido em andamento. Quando um participante pedir, ele aparece aqui.</string>
+    <string name="cozinha_ver_fila">Ver fila completa</string>
+
+    <!-- Fila -->
+    <string name="fila_titulo">Fila de pedidos</string>
+    <string name="fila_filtro_ativos">Ativos</string>
+    <string name="fila_filtro_historico">Histórico</string>
+    <string name="fila_vazio_ativos_titulo">Fila vazia</string>
+    <string name="fila_vazio_ativos_texto">Os pedidos da sua loja aparecem aqui assim que forem feitos.</string>
+    <string name="fila_vazio_historico_titulo">Sem histórico ainda</string>
+    <string name="fila_vazio_historico_texto">Pedidos retirados ou cancelados ficam registrados aqui.</string>
+    <string name="fila_sem_loja">Cadastre ou aguarde a aprovação da loja para receber pedidos.</string>
+    <string name="pedido_cliente_data">%1$s · %2$s</string>
+    <string name="pedido_aguardando_recebimento">Aguardando recebimento</string>
+    <string name="pedido_recebido">Recebido pela cozinha</string>
+    <string name="pedido_previsao_min">Previsão: aprox. %1$d min</string>
+    <string name="pedido_pronto_retirada">Pronto para retirada</string>
+    <string name="pedido_retirado">Retirado</string>
+    <string name="acao_receber">Receber pedido</string>
+    <string name="acao_iniciar_preparo">Iniciar preparo</string>
+    <string name="acao_marcar_pronto">Marcar como pronto</string>
+    <string name="acao_confirmar_retirada">Confirmar retirada</string>
+    <string name="acao_feita_receber">Pedido recebido.</string>
+    <string name="acao_feita_preparo">Preparo iniciado. O participante já vê a atualização.</string>
+    <string name="acao_feita_pronto">Pedido pronto. O participante foi avisado.</string>
+    <string name="acao_feita_retirada">Retirada confirmada.</string>
+    <string name="acao_indisponivel">Essa ação não está disponível agora.</string>
+
+    <!-- Detalhes do pedido -->
+    <string name="pedido_cozinha_titulo">Detalhes do pedido</string>
+    <string name="pedido_cozinha_itens">Itens do pedido</string>
+    <string name="pedido_cozinha_pagamento">Pagamento: %1$s</string>
+    <string name="pedido_cozinha_total">Total</string>
+    <string name="pedido_cozinha_previsao">Previsão de preparo</string>
+    <string name="pedido_cozinha_ajustar_menos">Reduzir previsão em 5 minutos</string>
+    <string name="pedido_cozinha_ajustar_mais">Aumentar previsão em 5 minutos</string>
+    <string name="pedido_cozinha_previsao_nota">O participante vê este valor em Minha Jornada.</string>
+    <string name="pedido_cozinha_indisponivel">Pedido não encontrado para a sua loja.</string>
+    <string name="pedido_cozinha_aviso">O participante acompanha cada etapa em Minha Jornada e recebe uma notificação quando o pedido ficar pronto.</string>
+
+    <!-- Produtos -->
+    <string name="produtos_titulo">Produtos</string>
+    <string name="produtos_novo">Novo produto</string>
+    <string name="produtos_vazio_titulo">Nenhum produto cadastrado</string>
+    <string name="produtos_vazio_texto">Cadastre seu primeiro produto para ele aparecer no cardápio.</string>
+    <string name="produtos_sem_loja">Cadastre ou aguarde a aprovação da loja para criar produtos.</string>
+    <string name="produto_disponivel">Disponível</string>
+    <string name="produto_indisponivel">Desativado</string>
+    <string name="produto_publicado_cd">%1$s, disponível no cardápio</string>
+    <string name="produto_desativado_cd">%1$s, desativado</string>
+    <string name="produto_editar_cd">Editar %1$s</string>
+    <string name="produto_form_novo">Novo produto</string>
+    <string name="produto_form_editar">Editar produto</string>
+    <string name="produto_campo_nome">Nome do produto</string>
+    <string name="produto_campo_descricao">Descrição</string>
+    <string name="produto_campo_categoria">Categoria</string>
+    <string name="produto_campo_preco">Preço (R$)</string>
+    <string name="produto_campo_imagem">Imagem</string>
+    <string name="produto_campo_ingredientes">Ingredientes</string>
+    <string name="produto_campo_porcao">Porção</string>
+    <string name="produto_campo_tempo">Tempo estimado (min)</string>
+    <string name="produto_campo_estoque">Estoque (demonstrativo)</string>
+    <string name="produto_campo_disponivel">Disponível no cardápio</string>
+    <string name="produto_campo_disponivel_desc">Desativado, o produto some do cardápio, mas continua cadastrado.</string>
+    <string name="produto_erro_nome">Informe o nome do produto.</string>
+    <string name="produto_erro_preco">Informe um preço válido.</string>
+    <string name="produto_erro_estoque">Informe um estoque válido.</string>
+    <string name="produto_salvo">Produto salvo.</string>
+    <string name="produto_loja_invalida">Loja inválida.</string>
+    <string name="produto_salvar">Salvar produto</string>
+
+    <!-- Minha loja -->
+    <string name="minha_loja_titulo">Minha loja</string>
+    <string name="minha_loja_dados">Dados da loja</string>
+    <string name="minha_loja_aviso">Estes dados aparecem para os participantes em "Quem prepara", nos detalhes dos produtos.</string>
+    <string name="minha_loja_nome">Nome da loja</string>
+    <string name="minha_loja_descricao">Descrição</string>
+    <string name="minha_loja_telefone">Telefone</string>
+    <string name="minha_loja_endereco">Endereço</string>
+    <string name="minha_loja_categoria">Categoria</string>
+    <string name="minha_loja_cnpj">CNPJ (não editável)</string>
+    <string name="minha_loja_salvar">Salvar alterações</string>
+    <string name="minha_loja_salva">Dados da loja atualizados.</string>
+    <string name="minha_loja_erro_nome">Informe o nome da loja.</string>
+    <string name="minha_loja_sem_loja">Você ainda não tem loja. Cadastre uma para vender no evento.</string>
+    <string name="minha_loja_conta">Conta do lojista</string>
+    <string name="minha_loja_status_aprovada">Aprovada</string>
+    <string name="minha_loja_status_pendente">Em análise</string>
+    <string name="minha_loja_status_rejeitada">Não aprovada</string>
+    <string name="minha_loja_status_bloqueada">Bloqueada</string>
+</resources>

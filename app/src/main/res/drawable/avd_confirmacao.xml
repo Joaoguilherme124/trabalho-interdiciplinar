@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_confirmacao_animada">
+    <target
+        android:name="g_circulo"
+        android:animation="@animator/confirmacao_circulo" />
+    <target
+        android:name="p_check"
+        android:animation="@animator/confirmacao_check" />
+    <target
+        android:name="g_fragmento_a"
+        android:animation="@animator/confirmacao_fragmento" />
+    <target
+        android:name="g_fragmento_b"
+        android:animation="@animator/confirmacao_fragmento" />
+</animated-vector>

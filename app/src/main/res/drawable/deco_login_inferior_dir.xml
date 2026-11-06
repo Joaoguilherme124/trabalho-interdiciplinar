@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Marca d'água do canto inferior direito: losangos em baixíssima opacidade (≈8%). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="150dp"
+    android:height="150dp"
+    android:viewportWidth="150"
+    android:viewportHeight="150">
+    <path
+        android:fillColor="#146A234F"
+        android:pathData="M110,30L190,110L110,190L30,110Z" />
+    <path
+        android:fillColor="#14F5B82E"
+        android:pathData="M110,70L150,110L110,150L70,110Z" />
+</vector>
