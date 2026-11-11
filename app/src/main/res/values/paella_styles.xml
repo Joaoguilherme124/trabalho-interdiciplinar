@@ -92,14 +92,15 @@
         <item name="android:windowBackground">@color/brand_creme</item>
     </style>
 
-    <!-- Splash: fundo vinho já na janela, sem animação nem atraso. -->
+    <!-- Splash: fundo creme sem ícone geométrico; o logo fica em activity_splash. -->
     <style name="Theme.TrabalhoInterDiciplinar.SplashMarca" parent="Theme.TrabalhoInterDiciplinar">
         <item name="android:statusBarColor">@color/brand_creme</item>
         <item name="android:navigationBarColor">@color/brand_creme</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:windowBackground">@color/brand_creme</item>
         <item name="android:windowSplashScreenBackground" tools:targetApi="31">@color/brand_creme</item>
-        <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="31">@drawable/avd_splash_marca</item>
-        <item name="android:windowSplashScreenAnimationDuration" tools:targetApi="31">900</item>
+        <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="31">@drawable/ic_splash_vazio</item>
+        <item name="android:windowSplashScreenIconBackgroundColor" tools:targetApi="31">@color/brand_creme</item>
+        <item name="android:windowSplashScreenAnimationDuration" tools:targetApi="31">0</item>
     </style>
 </resources>

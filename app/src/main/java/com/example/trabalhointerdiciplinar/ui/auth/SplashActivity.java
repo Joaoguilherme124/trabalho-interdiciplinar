@@ -10,11 +10,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.trabalhointerdiciplinar.R;
 
 /**
- * Abertura de marca. Não há temporizador nem animação: a tela aparece durante o início do
- * processo e a navegação segue assim que o primeiro quadro é desenhado. Quem já tem sessão é
+ * Abertura de marca: mostra o logo e segue para o login. Quem já tem sessão é
  * encaminhado à sua área pelo próprio {@link LoginActivity}, que preserva essa decisão.
  */
 public class SplashActivity extends AppCompatActivity {
+
+    private static final long ATRASO_MS = 1500L;
 
     private boolean navegou;
 
@@ -28,7 +29,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public boolean onPreDraw() {
                 raiz.getViewTreeObserver().removeOnPreDrawListener(this);
-                raiz.post(SplashActivity.this::seguir);
+                raiz.postDelayed(SplashActivity.this::seguir, ATRASO_MS);
                 return true;
             }
         });
