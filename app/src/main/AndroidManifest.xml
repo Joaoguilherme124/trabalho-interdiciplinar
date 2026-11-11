@@ -34,6 +34,7 @@
 
         <activity android:name=".ui.auth.CadastroActivity" android:exported="false" android:theme="@style/Theme.TrabalhoInterDiciplinar.Auth" android:windowSoftInputMode="adjustResize" />
         <activity android:name=".ui.auth.RecuperarSenhaActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.auth.TrocarCredenciaisActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
 
         <activity android:name=".ui.buyer.BuyerMainActivity" android:exported="false" />
         <activity android:name=".ui.buyer.LojaDetalheActivity" android:exported="false" />
@@ -55,6 +56,7 @@
         <activity android:name=".ui.merchant.ProdutoFormActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
 
         <activity android:name=".ui.admin.AdminMainActivity" android:exported="false" />
+        <activity android:name=".ui.admin.AdminCriarLojistaActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
 
         <!-- Mantido por compatibilidade; redireciona no onCreate se necessário -->
         <activity android:name=".MainActivity" android:exported="false" />

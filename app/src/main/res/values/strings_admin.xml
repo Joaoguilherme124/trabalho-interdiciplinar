@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="admin_criar_lojista">Criar conta de lojista</string>
+    <string name="admin_criar_titulo">Nova conta de lojista</string>
+    <string name="admin_criar_apoio">Só o admin cria esta conta. Passe o e-mail e a senha temporários para o lojista; no primeiro acesso ele troca os dois.</string>
+    <string name="admin_criar_nome">Nome</string>
+    <string name="admin_criar_email">E-mail temporário</string>
+    <string name="admin_criar_senha">Senha temporária</string>
+    <string name="admin_criar_telefone">Telefone (opcional)</string>
+    <string name="admin_criar_salvar">Criar e entregar ao lojista</string>
+    <string name="admin_criar_ok">Conta criada. Entregue %1$s / %2$s ao lojista.</string>
+    <string name="admin_lojistas">Lojistas</string>
+    <string name="admin_lojista_aguardando">Aguardando primeiro acesso</string>
+    <string name="admin_lojista_ok">Já acessou</string>
+
+    <string name="conta_trocar_titulo">Atualize sua conta</string>
+    <string name="conta_trocar_apoio">Esta é a primeira entrada. Troque o e-mail e a senha que o admin passou antes de usar a Cozinha.</string>
+    <string name="conta_trocar_apoio_livre">Altere o e-mail. A senha só muda se você preencher os dois campos abaixo.</string>
+    <string name="conta_trocar_email">Novo e-mail</string>
+    <string name="conta_trocar_senha">Nova senha</string>
+    <string name="conta_trocar_confirma">Confirmar nova senha</string>
+    <string name="conta_trocar_salvar">Salvar e continuar</string>
+    <string name="conta_trocar_salvar_livre">Salvar</string>
+    <string name="conta_alterar">Alterar e-mail e senha</string>
+    <string name="conta_erro_email">Informe um e-mail válido.</string>
+    <string name="conta_erro_email_uso">Este e-mail já está em uso.</string>
+    <string name="conta_erro_senha">Informe a nova senha.</string>
+    <string name="conta_erro_senha_diferente">As senhas não coincidem.</string>
+    <string name="conta_erro_senha_igual">A senha nova não pode ser a temporária.</string>
+    <string name="conta_salva">Dados da conta atualizados.</string>
+</resources>

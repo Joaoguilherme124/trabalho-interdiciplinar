@@ -39,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
 
         SessionManager session = SessionManager.getInstance(this);
         if (session.isLoggedIn()) {
-            navegarPorTipo(session.getUsuario().getTipo());
+            navegarAposLogin(session.getUsuario());
             finish();
             return;
         }
@@ -85,7 +85,7 @@ public class LoginActivity extends AppCompatActivity {
                 return;
             }
             session.login(user);
-            navegarPorTipo(user.getTipo());
+            navegarAposLogin(user);
             finish();
         });
 
@@ -145,6 +145,16 @@ public class LoginActivity extends AppCompatActivity {
                 .setMessage(R.string.login_dev_contas)
                 .setPositiveButton(R.string.login_fechar, null)
                 .show();
+    }
+
+    private void navegarAposLogin(Usuario user) {
+        if (user.getTipo() == TipoUsuario.LOJISTA && user.isPrecisaTrocarCredenciais()) {
+            Intent intent = new Intent(this, TrocarCredenciaisActivity.class);
+            intent.putExtra(TrocarCredenciaisActivity.EXTRA_OBRIGATORIO, true);
+            startActivity(intent);
+            return;
+        }
+        navegarPorTipo(user.getTipo());
     }
 
     private void navegarPorTipo(TipoUsuario tipo) {

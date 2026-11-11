@@ -19,11 +19,11 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_width="150dp"
-                android:layout_height="167dp"
+                android:layout_width="110dp"
+                android:layout_height="122dp"
                 android:layout_gravity="top|end"
                 android:importantForAccessibility="no"
-                android:scaleType="fitXY"
+                android:scaleType="fitEnd"
                 android:src="@drawable/deco_login_superior" />
 
             <LinearLayout
@@ -41,10 +41,11 @@
                         android:layout_gravity="top|start"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="12dp"
-                        android:layout_marginEnd="96dp"
+                        android:layout_marginEnd="140dp"
                         android:adjustViewBounds="true"
                         android:contentDescription="@string/logo_cd"
-                        android:maxWidth="200dp"
+                        android:maxWidth="180dp"
+                        android:maxHeight="72dp"
                         android:scaleType="fitStart"
                         android:src="@drawable/logo_paella_beneficente" />
 

@@ -8,12 +8,20 @@ public class Usuario {
     private TipoUsuario tipo;
     private String endereco;
     private String telefone;
+    /** Conta criada pelo admin: o lojista deve trocar e-mail e senha no primeiro acesso. */
+    private boolean precisaTrocarCredenciais;
 
     public Usuario() {
     }
 
     public Usuario(String id, String nome, String email, String senha,
                    TipoUsuario tipo, String endereco, String telefone) {
+        this(id, nome, email, senha, tipo, endereco, telefone, false);
+    }
+
+    public Usuario(String id, String nome, String email, String senha,
+                   TipoUsuario tipo, String endereco, String telefone,
+                   boolean precisaTrocarCredenciais) {
         this.id = id;
         this.nome = nome;
         this.email = email;
@@ -21,6 +29,7 @@ public class Usuario {
         this.tipo = tipo;
         this.endereco = endereco;
         this.telefone = telefone;
+        this.precisaTrocarCredenciais = precisaTrocarCredenciais;
     }
 
     public String getId() {
@@ -77,5 +86,13 @@ public class Usuario {
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    public boolean isPrecisaTrocarCredenciais() {
+        return precisaTrocarCredenciais;
+    }
+
+    public void setPrecisaTrocarCredenciais(boolean precisaTrocarCredenciais) {
+        this.precisaTrocarCredenciais = precisaTrocarCredenciais;
     }
 }

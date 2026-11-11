@@ -25,6 +25,7 @@ import com.example.trabalhointerdiciplinar.model.Loja;
 import com.example.trabalhointerdiciplinar.model.StatusLoja;
 import com.example.trabalhointerdiciplinar.model.Usuario;
 import com.example.trabalhointerdiciplinar.ui.auth.LoginActivity;
+import com.example.trabalhointerdiciplinar.ui.auth.TrocarCredenciaisActivity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -59,6 +60,8 @@ public class MerchantPerfilFragment extends Fragment {
         ((TextView) view.findViewById(R.id.txt_conta)).setText(u.getNome() + " · " + u.getEmail());
         view.findViewById(R.id.btn_cadastrar_loja).setOnClickListener(v ->
                 startActivity(new Intent(requireContext(), CadastroLojaActivity.class)));
+        view.findViewById(R.id.btn_alterar_conta).setOnClickListener(v ->
+                startActivity(new Intent(requireContext(), TrocarCredenciaisActivity.class)));
         view.findViewById(R.id.btn_salvar_loja).setOnClickListener(v -> salvar());
         view.findViewById(R.id.btn_sair).setOnClickListener(v -> sair());
     }
@@ -68,7 +71,9 @@ public class MerchantPerfilFragment extends Fragment {
         super.onResume();
         View raiz = getView();
         if (raiz == null) return;
-        String donoId = SessionManager.getInstance(requireContext()).getUsuario().getId();
+        Usuario u = SessionManager.getInstance(requireContext()).getUsuario();
+        ((TextView) raiz.findViewById(R.id.txt_conta)).setText(u.getNome() + " · " + u.getEmail());
+        String donoId = u.getId();
         loja = MockDataRepository.getInstance().getLojaDoDono(donoId);
         boolean tem = loja != null;
         raiz.findViewById(R.id.bloco_form_loja).setVisibility(tem ? View.VISIBLE : View.GONE);

@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.trabalhointerdiciplinar.R;
+import com.example.trabalhointerdiciplinar.adapter.AdminLojistaAdapter;
 import com.example.trabalhointerdiciplinar.adapter.AdminLojaAdapter;
 import com.example.trabalhointerdiciplinar.data.MockDataRepository;
 import com.example.trabalhointerdiciplinar.data.SessionManager;
@@ -25,6 +26,7 @@ import com.example.trabalhointerdiciplinar.util.MoneyUtils;
 public class AdminMainActivity extends AppCompatActivity {
 
     private AdminLojaAdapter adapter;
+    private AdminLojistaAdapter lojistaAdapter;
     private TextView txtComissao;
 
     @Override
@@ -60,6 +62,14 @@ public class AdminMainActivity extends AppCompatActivity {
         });
         rv.setAdapter(adapter);
 
+        RecyclerView rvLojistas = findViewById(R.id.rv_lojistas);
+        rvLojistas.setLayoutManager(new LinearLayoutManager(this));
+        lojistaAdapter = new AdminLojistaAdapter();
+        rvLojistas.setAdapter(lojistaAdapter);
+
+        findViewById(R.id.btn_criar_lojista).setOnClickListener(v ->
+                startActivity(new Intent(this, AdminCriarLojistaActivity.class)));
+
         findViewById(R.id.btn_sair).setOnClickListener(v -> {
             SessionManager.getInstance(this).logout();
             Intent i = new Intent(this, LoginActivity.class);
@@ -74,5 +84,12 @@ public class AdminMainActivity extends AppCompatActivity {
         MockDataRepository repo = MockDataRepository.getInstance();
         txtComissao.setText(MoneyUtils.format(repo.getTotalComissoes(0.10)));
         adapter.submit(repo.getTodasLojas());
+        lojistaAdapter.submit(repo.getUsuariosLojista());
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (lojistaAdapter != null) refresh();
     }
 }

@@ -99,6 +99,14 @@ public class MockDataRepository {
         return u;
     }
 
+    public List<Usuario> getUsuariosLojista() {
+        List<Usuario> result = new ArrayList<>();
+        for (Usuario u : usuarios) {
+            if (u.getTipo() == TipoUsuario.LOJISTA) result.add(u);
+        }
+        return result;
+    }
+
     public List<Loja> getLojasAprovadas() {
         List<Loja> result = new ArrayList<>();
         for (Loja l : lojas) {

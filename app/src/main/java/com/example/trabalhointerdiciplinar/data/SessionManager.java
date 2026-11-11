@@ -34,6 +34,7 @@ public class SessionManager {
                 .putString("tipo", usuario.getTipo().name())
                 .putString("endereco", usuario.getEndereco())
                 .putString("telefone", usuario.getTelefone())
+                .putBoolean("precisaTrocarCredenciais", usuario.isPrecisaTrocarCredenciais())
                 .apply();
     }
 
@@ -60,7 +61,8 @@ public class SessionManager {
                 prefs.getString("senha", ""),
                 TipoUsuario.valueOf(prefs.getString("tipo", TipoUsuario.COMPRADOR.name())),
                 prefs.getString("endereco", ""),
-                prefs.getString("telefone", "")
+                prefs.getString("telefone", ""),
+                prefs.getBoolean("precisaTrocarCredenciais", false)
         );
     }
 }

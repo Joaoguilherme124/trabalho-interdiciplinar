@@ -1,5 +1,6 @@
 package com.example.trabalhointerdiciplinar.ui.merchant;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -10,6 +11,9 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 
 import com.example.trabalhointerdiciplinar.R;
+import com.example.trabalhointerdiciplinar.data.SessionManager;
+import com.example.trabalhointerdiciplinar.model.Usuario;
+import com.example.trabalhointerdiciplinar.ui.auth.TrocarCredenciaisActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MerchantMainActivity extends AppCompatActivity {
@@ -17,6 +21,14 @@ public class MerchantMainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Usuario usuario = SessionManager.getInstance(this).getUsuario();
+        if (usuario != null && usuario.isPrecisaTrocarCredenciais()) {
+            Intent troca = new Intent(this, TrocarCredenciaisActivity.class);
+            troca.putExtra(TrocarCredenciaisActivity.EXTRA_OBRIGATORIO, true);
+            startActivity(troca);
+            finish();
+            return;
+        }
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_merchant_main);
 
