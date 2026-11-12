@@ -50,10 +50,17 @@ public class AdminLojaAdapter extends RecyclerView.Adapter<AdminLojaAdapter.VH> 
         holder.nome.setText(l.getNome());
         holder.cnpj.setText(l.getCnpj());
         holder.categoria.setText(l.getCategoria());
-        holder.status.setText(l.getStatus().name());
+        int rotulo;
+        if (l.getStatus() == StatusLoja.APROVADA) {
+            rotulo = R.string.minha_loja_status_aprovada;
+        } else if (l.getStatus() == StatusLoja.REJEITADA) {
+            rotulo = R.string.minha_loja_status_rejeitada;
+        } else {
+            rotulo = R.string.minha_loja_status_pendente;
+        }
+        holder.status.setText(rotulo);
         boolean pendente = l.getStatus() == StatusLoja.PENDENTE;
-        holder.btnAprovar.setVisibility(pendente ? View.VISIBLE : View.GONE);
-        holder.btnRejeitar.setVisibility(pendente ? View.VISIBLE : View.GONE);
+        holder.acoes.setVisibility(pendente ? View.VISIBLE : View.GONE);
         holder.btnAprovar.setOnClickListener(v -> listener.onAprovar(l));
         holder.btnRejeitar.setOnClickListener(v -> listener.onRejeitar(l));
     }
@@ -65,6 +72,7 @@ public class AdminLojaAdapter extends RecyclerView.Adapter<AdminLojaAdapter.VH> 
 
     static class VH extends RecyclerView.ViewHolder {
         final TextView nome, cnpj, categoria, status;
+        final View acoes;
         final Button btnAprovar, btnRejeitar;
 
         VH(@NonNull View itemView) {
@@ -73,6 +81,7 @@ public class AdminLojaAdapter extends RecyclerView.Adapter<AdminLojaAdapter.VH> 
             cnpj = itemView.findViewById(R.id.txt_cnpj);
             categoria = itemView.findViewById(R.id.txt_categoria);
             status = itemView.findViewById(R.id.txt_status);
+            acoes = itemView.findViewById(R.id.acoes_pendente);
             btnAprovar = itemView.findViewById(R.id.btn_aprovar);
             btnRejeitar = itemView.findViewById(R.id.btn_rejeitar);
         }

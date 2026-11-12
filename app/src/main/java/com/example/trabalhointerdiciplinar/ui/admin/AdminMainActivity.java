@@ -37,8 +37,7 @@ public class AdminMainActivity extends AppCompatActivity {
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.root_admin), (v, insets) -> {
             Insets bars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            int pad = (int) (16 * getResources().getDisplayMetrics().density);
-            v.setPadding(bars.left + pad, bars.top + pad, bars.right + pad, bars.bottom + pad);
+            v.setPadding(bars.left, bars.top, bars.right, bars.bottom);
             return insets;
         });
 
@@ -49,14 +48,14 @@ public class AdminMainActivity extends AppCompatActivity {
             @Override
             public void onAprovar(Loja loja) {
                 MockDataRepository.getInstance().atualizarStatusLoja(loja.getId(), StatusLoja.APROVADA);
-                Toast.makeText(AdminMainActivity.this, "Loja aprovada", Toast.LENGTH_SHORT).show();
+                Toast.makeText(AdminMainActivity.this, R.string.admin_loja_aprovada, Toast.LENGTH_SHORT).show();
                 refresh();
             }
 
             @Override
             public void onRejeitar(Loja loja) {
                 MockDataRepository.getInstance().atualizarStatusLoja(loja.getId(), StatusLoja.REJEITADA);
-                Toast.makeText(AdminMainActivity.this, "Loja rejeitada", Toast.LENGTH_SHORT).show();
+                Toast.makeText(AdminMainActivity.this, R.string.admin_loja_rejeitada, Toast.LENGTH_SHORT).show();
                 refresh();
             }
         });

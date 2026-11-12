@@ -18,7 +18,7 @@ import java.util.List;
 public final class DemoCatalog {
 
     /** Quando true, a interface avisa que preços, pedidos e pagamentos são simulados. */
-    public static final boolean AMBIENTE_DEMO = true;
+    public static final boolean AMBIENTE_DEMO = false;
 
     public static final String LOJA_ID = "l1";
     public static final String LOJA_NOME = "Paella Beneficente ABADEUS";

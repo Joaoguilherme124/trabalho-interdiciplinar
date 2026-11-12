@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="admin_titulo">Painel admin</string>
+    <string name="admin_apoio">Contas de loja e aprovação das barracas.</string>
+    <string name="admin_comissoes">Comissões da plataforma (10%)</string>
+    <string name="admin_aprovacao">Aprovação de lojas</string>
+    <string name="admin_loja_aprovada">Loja aprovada</string>
+    <string name="admin_loja_rejeitada">Loja rejeitada</string>
     <string name="admin_criar_lojista">Criar conta de lojista</string>
     <string name="admin_criar_titulo">Nova conta de lojista</string>
     <string name="admin_criar_apoio">Só o admin cria esta conta. Passe o e-mail e a senha temporários para o lojista; no primeiro acesso ele troca os dois.</string>

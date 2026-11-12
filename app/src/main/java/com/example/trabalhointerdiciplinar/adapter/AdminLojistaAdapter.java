@@ -37,13 +37,9 @@ public class AdminLojistaAdapter extends RecyclerView.Adapter<AdminLojistaAdapte
         Usuario u = itens.get(position);
         holder.nome.setText(u.getNome());
         holder.email.setText(u.getEmail());
-        if (u.isPrecisaTrocarCredenciais()) {
-            holder.status.setText(R.string.admin_lojista_aguardando);
-            holder.status.setTextColor(holder.itemView.getResources().getColor(R.color.brand_paprica, null));
-        } else {
-            holder.status.setText(R.string.admin_lojista_ok);
-            holder.status.setTextColor(holder.itemView.getResources().getColor(R.color.leaf, null));
-        }
+        holder.status.setText(u.isPrecisaTrocarCredenciais()
+                ? R.string.admin_lojista_aguardando
+                : R.string.admin_lojista_ok);
     }
 
     @Override
