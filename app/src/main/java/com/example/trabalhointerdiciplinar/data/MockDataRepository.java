@@ -99,6 +99,11 @@ public class MockDataRepository {
         return u;
     }
 
+    public void atualizarSenha(String id, String senha) {
+        Usuario u = getUsuarioById(id);
+        if (u != null) u.setSenha(senha);
+    }
+
     public List<Usuario> getUsuariosLojista() {
         List<Usuario> result = new ArrayList<>();
         for (Usuario u : usuarios) {

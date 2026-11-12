@@ -29,4 +29,15 @@ Senha de todas: 123
     <string name="login_senha_mostrar">Mostrar senha</string>
     <string name="login_senha_ocultar">Ocultar senha</string>
     <string name="login_fechar">Fechar</string>
+
+    <string name="recuperar_headline">Recuperar senha</string>
+    <string name="recuperar_apoio">Informe o e-mail da conta. Se ele existir neste aplicativo, você poderá criar uma senha nova agora.</string>
+    <string name="recuperar_continuar">Continuar</string>
+    <string name="recuperar_email_inexistente">Não encontramos uma conta com este e-mail.</string>
+    <string name="redefinir_headline">Nova senha</string>
+    <string name="redefinir_apoio">Defina a senha que você vai usar no próximo login.</string>
+    <string name="redefinir_senha">Nova senha</string>
+    <string name="redefinir_confirma">Confirmar senha</string>
+    <string name="redefinir_salvar">Salvar senha</string>
+    <string name="redefinir_ok">Senha atualizada. Entre com o e-mail e a senha nova.</string>
 </resources>

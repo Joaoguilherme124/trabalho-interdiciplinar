@@ -34,6 +34,7 @@
 
         <activity android:name=".ui.auth.CadastroActivity" android:exported="false" android:theme="@style/Theme.TrabalhoInterDiciplinar.Auth" android:windowSoftInputMode="adjustResize" />
         <activity android:name=".ui.auth.RecuperarSenhaActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.auth.RedefinirSenhaActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
         <activity android:name=".ui.auth.TrocarCredenciaisActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
 
         <activity android:name=".ui.buyer.BuyerMainActivity" android:exported="false" />
