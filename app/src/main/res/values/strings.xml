@@ -62,6 +62,8 @@
     <string name="carrinho_total">Total</string>
     <string name="detalhe_adicionar">Adicionar · %1$s</string>
     <string name="detalhe_voltar">Voltar</string>
+    <string name="loja_catalogo">Catálogo da loja</string>
+    <string name="loja_nao_encontrada">Loja não encontrada</string>
     <string name="detalhe_adicionado">Adicionado ao carrinho</string>
     <string name="cd_adicionar">Adicionar %1$s ao carrinho</string>
     <string name="cd_diminuir">Diminuir quantidade</string>
